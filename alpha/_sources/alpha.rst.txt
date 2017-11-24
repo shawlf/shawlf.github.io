@@ -1,0 +1,53 @@
+alpha package
+=============
+
+Subpackages
+-----------
+
+.. toctree::
+
+    alpha.utils
+
+Submodules
+----------
+
+alpha\.analyzer module
+----------------------
+
+.. automodule:: alpha.analyzer
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+alpha\.barra module
+-------------------
+
+.. automodule:: alpha.barra
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+alpha\.indicator module
+-----------------------
+
+.. automodule:: alpha.indicator
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+alpha\.preprocess module
+------------------------
+
+.. automodule:: alpha.preprocess
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: alpha
+    :members:
+    :undoc-members:
+    :show-inheritance:

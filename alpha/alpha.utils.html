@@ -1,0 +1,466 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>alpha.utils package &#8212; alpha 0.7.5 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.7.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">alpha 0.7.5 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">alpha.utils package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-alpha.utils.common">alpha.utils.common module</a></li>
+<li><a class="reference internal" href="#module-alpha.utils.config">alpha.utils.config module</a></li>
+<li><a class="reference internal" href="#module-alpha.utils.engines">alpha.utils.engines module</a></li>
+<li><a class="reference internal" href="#module-alpha.utils.factor">alpha.utils.factor module</a></li>
+<li><a class="reference internal" href="#module-alpha.utils.logger">alpha.utils.logger module</a></li>
+<li><a class="reference internal" href="#module-alpha.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/alpha.utils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="alpha-utils-package">
+<h1>alpha.utils package<a class="headerlink" href="#alpha-utils-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-alpha.utils.common">
+<span id="alpha-utils-common-module"></span><h2>alpha.utils.common module<a class="headerlink" href="#module-alpha.utils.common" title="Permalink to this headline">¶</a></h2>
+<p>通用模块</p>
+<dl class="function">
+<dt id="alpha.utils.common.date_to_str">
+<code class="descclassname">alpha.utils.common.</code><code class="descname">date_to_str</code><span class="sig-paren">(</span><em>date</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.common.date_to_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>将日期转换为 yyyymmdd 的字符串形式</p>
+<dl class="docutils">
+<dt>date <span class="classifier-delimiter">:</span> <span class="classifier">str or pd.Timestamp or datetime</span></dt>
+<dd>需要转换才字符串的日期，包括字符串日期</dd>
+</dl>
+<dl class="docutils">
+<dt>str</dt>
+<dd>yyyymmdd 格式的字符串</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.utils.common.later_than">
+<code class="descclassname">alpha.utils.common.</code><code class="descname">later_than</code><span class="sig-paren">(</span><em>dt1</em>, <em>dt2</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.common.later_than" title="Permalink to this definition">¶</a></dt>
+<dd><p>比较 dt1 是否晚于 dt2</p>
+<dl class="docutils">
+<dt>dt1 <span class="classifier-delimiter">:</span> <span class="classifier">integer, float, string, datetime, list, tuple, 1-d array, Series</span></dt>
+<dd>任何可以转变为时间的对象</dd>
+<dt>dt2 <span class="classifier-delimiter">:</span> <span class="classifier">integer, float, string, datetime, list, tuple, 1-d array, Series</span></dt>
+<dd>任何可以转变为时间的对象</dd>
+</dl>
+<dl class="docutils">
+<dt>bool</dt>
+<dd>dt1 表示的时间晚于 dt2 表示的时间返回 True，否则返回 False</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.utils.common.str_to_date">
+<code class="descclassname">alpha.utils.common.</code><code class="descname">str_to_date</code><span class="sig-paren">(</span><em>obj</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.common.str_to_date" title="Permalink to this definition">¶</a></dt>
+<dd><p>将 obj 解析为日期格式</p>
+<p>支持任何日期类型的参数，包括字符串日期， datetime 日期等
+具体参见 pandas.to_datetime</p>
+<p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html">https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html</a></p>
+<dl class="docutils">
+<dt>obj <span class="classifier-delimiter">:</span> <span class="classifier">object</span></dt>
+<dd>可以转换为日期的对象</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.Timestamp</dt>
+<dd>日期对象</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-alpha.utils.config">
+<span id="alpha-utils-config-module"></span><h2>alpha.utils.config module<a class="headerlink" href="#module-alpha.utils.config" title="Permalink to this headline">¶</a></h2>
+<p>读取配置文件</p>
+<dl class="function">
+<dt id="alpha.utils.config.get_db_url">
+<code class="descclassname">alpha.utils.config.</code><code class="descname">get_db_url</code><span class="sig-paren">(</span><em>section</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#alpha.utils.config.get_db_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>根据配置文件中的 [] 标示的 section 信息生成 db url</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.utils.config.get_log_folder">
+<code class="descclassname">alpha.utils.config.</code><code class="descname">get_log_folder</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.config.get_log_folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>返回 / 结尾的路径</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.utils.config.get_log_mode">
+<code class="descclassname">alpha.utils.config.</code><code class="descname">get_log_mode</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#alpha.utils.config.get_log_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>返回不同日志模式的开关情况</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.utils.config.get_since">
+<code class="descclassname">alpha.utils.config.</code><code class="descname">get_since</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.config.get_since" title="Permalink to this definition">¶</a></dt>
+<dd><p>获取配置文件中的起始日期</p>
+<dl class="docutils">
+<dt>pd.Timestamp</dt>
+<dd>起始日期</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.utils.config.get_until">
+<code class="descclassname">alpha.utils.config.</code><code class="descname">get_until</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.config.get_until" title="Permalink to this definition">¶</a></dt>
+<dd><p>获取截止日期</p>
+<dl class="docutils">
+<dt>pd.Timestamp</dt>
+<dd>截至日期</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-alpha.utils.engines">
+<span id="alpha-utils-engines-module"></span><h2>alpha.utils.engines module<a class="headerlink" href="#module-alpha.utils.engines" title="Permalink to this headline">¶</a></h2>
+<p>数据引擎</p>
+</div>
+<div class="section" id="module-alpha.utils.factor">
+<span id="alpha-utils-factor-module"></span><h2>alpha.utils.factor module<a class="headerlink" href="#module-alpha.utils.factor" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="alpha.utils.factor.align_to_trade_dt">
+<code class="descclassname">alpha.utils.factor.</code><code class="descname">align_to_trade_dt</code><span class="sig-paren">(</span><em>data</em>, <em>field</em>, <em>since</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.factor.align_to_trade_dt" title="Permalink to this definition">¶</a></dt>
+<dd><p>财务数据按交易日对齐</p>
+<p>从自然日填充到交易日，且每个交易日的取值为 <strong>下一个交易日之前</strong> 的最新值。</p>
+<p>财务数据由于频率较低，因此为了防止填充时数据缺失，最好每次都读取全部财务数据</p>
+<dl class="docutils">
+<dt>data <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame</span></dt>
+<dd>需要对齐的 DataFrame，必须包含 sid, ann_dt 列，</dd>
+<dt>field <span class="classifier-delimiter">:</span> <span class="classifier">str or pd.Timestamp</span></dt>
+<dd>字段名称</dd>
+<dt>since <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>格式为 yymmdd 的日期，表示从哪一天开始填充，若该日期不是交易日，则从该日期之后
+的第一个交易日开始</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame</dt>
+<dd>对齐后的 DataFrame，包含 sid, date, field 三列</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.utils.factor.aligned_to_quarter">
+<code class="descclassname">alpha.utils.factor.</code><code class="descname">aligned_to_quarter</code><span class="sig-paren">(</span><em>data_in</em>, <em>fields: list</em>, <em>method='ttm'</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.factor.aligned_to_quarter" title="Permalink to this definition">¶</a></dt>
+<dd><p>将原始数据对齐到季度。
+1. 先做单调化处理，丢掉修正过的数据，从而去掉未来信息
+2. 然后填充季度index，从而对齐到季度。
+3. 最后看method决定是否需要做ttm计算</p>
+<dl class="docutils">
+<dt>data_in <span class="classifier-delimiter">:</span> <span class="classifier">DataFrame</span></dt>
+<dd>需要包含 sid，ann_dt，report_period，通常还要包括其他需要的数据</dd>
+<dt>fields <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>需要对齐的字段，一般取data_in里所有的字段。不在该list中的信息会被丢弃</dd>
+<dt>method <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>默认是‘ttm’。如果是ttm，就做全部三个步骤。
+如果是其他值，就只做前两步，放弃最后一步做ttm计算，对齐到季度index后照抄原始数据</dd>
+</dl>
+<dl class="docutils">
+<dt>DataFrame</dt>
+<dd>去掉了非单调性数据的 DataFrame</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.utils.factor.bs_dataclean">
+<code class="descclassname">alpha.utils.factor.</code><code class="descname">bs_dataclean</code><span class="sig-paren">(</span><em>bs_data</em>, <em>table_str='asharebalancesheet'</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.factor.bs_dataclean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="alpha.utils.factor.dividend_dataclean">
+<code class="descclassname">alpha.utils.factor.</code><code class="descname">dividend_dataclean</code><span class="sig-paren">(</span><em>dividend_data</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.factor.dividend_dataclean" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="alpha.utils.factor.monotonize">
+<code class="descclassname">alpha.utils.factor.</code><code class="descname">monotonize</code><span class="sig-paren">(</span><em>data_in</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.factor.monotonize" title="Permalink to this definition">¶</a></dt>
+<dd><p>对原始财务数据的进行单调化处理。规则为</p>
+<p>** 报告期和对应的公告日期应该是同序的 **</p>
+<p>具体而言，Q1, H1, Q3, A 的公告日期应该是依次出现的，不能出现顺序颠倒。</p>
+<p>如果出现此种情况，暂时的处理为 ** 直接丢弃 **</p>
+<p>会导致部分数据丢失，尤其是修正过的数据</p>
+<dl class="docutils">
+<dt>data_in <span class="classifier-delimiter">:</span> <span class="classifier">DataFrame</span></dt>
+<dd>需要包含 sid，ann_dt，report_period，通常还要包括其他需要的数据</dd>
+</dl>
+<dl class="docutils">
+<dt>DataFrame</dt>
+<dd>去掉了非单调性数据的 DataFrame</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.utils.factor.set_finance_nan">
+<code class="descclassname">alpha.utils.factor.</code><code class="descname">set_finance_nan</code><span class="sig-paren">(</span><em>data_aligned</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.factor.set_finance_nan" title="Permalink to this definition">¶</a></dt>
+<dd><p>过滤金融行业，将金融行业的因子值填充为np.nan</p>
+<p>** 输入数据必须对齐到交易日**</p>
+<dl class="docutils">
+<dt>data_aligned <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame</span></dt>
+<dd>必须包含 sid, date, value 三列</dd>
+</dl>
+<p>data : pd.DataFrame</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.utils.factor.vec_cal">
+<code class="descclassname">alpha.utils.factor.</code><code class="descname">vec_cal</code><span class="sig-paren">(</span><em>data_in</em>, <em>fields: list</em>, <em>func</em>, <em>window</em>, <em>lag=0</em>, <em>fill_negative=None</em>, <em>min_data_percent=0.75</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.factor.vec_cal" title="Permalink to this definition">¶</a></dt>
+<dd><p>对数据进行指定的运算</p>
+<dl class="docutils">
+<dt>data_in <span class="classifier-delimiter">:</span> <span class="classifier">DataFrame</span></dt>
+<dd>完整的季度序列，需要包含 sid，ann_dt，report_period</dd>
+<dt>fields <span class="classifier-delimiter">:</span> <span class="classifier">list or str</span></dt>
+<dd>需要计算的字段</dd>
+<dt>func <span class="classifier-delimiter">:</span> <span class="classifier">function</span></dt>
+<dd>计算函数，譬如 mean，sum 等，必须是能从一个数组产生一个值的函数</dd>
+<dt>window <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>计算的窗口长度，指几个季度</dd>
+<dt>lag <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>需要源数据的偏移量，默认不偏移</dd>
+<dt>fill_negative <span class="classifier-delimiter">:</span> <span class="classifier">None or number</span></dt>
+<dd>需要对负值进行替代处理</dd>
+<dt>min_data_percent <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>窗口中数据缺失不能低于的比例，否则值为 nan，默认为 0.75</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.utils.factor.vec_cal_ratio">
+<code class="descclassname">alpha.utils.factor.</code><code class="descname">vec_cal_ratio</code><span class="sig-paren">(</span><em>data_in</em>, <em>fields</em>, <em>years=1</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.factor.vec_cal_ratio" title="Permalink to this definition">¶</a></dt>
+<dd><p>计算指标的同比增长率</p>
+<p>输入数据为已做过 aligned_to_quarter 处理的序列</p>
+<dl class="docutils">
+<dt>data_in <span class="classifier-delimiter">:</span> <span class="classifier">DataFrame</span></dt>
+<dd>完整的季度序列，需要包含 sid，ann_dt，report_period</dd>
+<dt>fields <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd>需要计算增长率的字段</dd>
+<dt>years <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>需要计算增长率的年限，默认为1</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-alpha.utils.logger">
+<span id="alpha-utils-logger-module"></span><h2>alpha.utils.logger module<a class="headerlink" href="#module-alpha.utils.logger" title="Permalink to this headline">¶</a></h2>
+<p>日志模块</p>
+<dl class="class">
+<dt id="alpha.utils.logger.BufferedMongoHandler">
+<em class="property">class </em><code class="descclassname">alpha.utils.logger.</code><code class="descname">BufferedMongoHandler</code><span class="sig-paren">(</span><em>level=0</em>, <em>host='localhost'</em>, <em>port=27017</em>, <em>database_name='logs'</em>, <em>collection='logs'</em>, <em>username=None</em>, <em>password=None</em>, <em>authentication_db='admin'</em>, <em>fail_silently=False</em>, <em>formatter=None</em>, <em>capped=False</em>, <em>capped_max=1000</em>, <em>capped_size=1000000</em>, <em>reuse=True</em>, <em>buffer_size=100</em>, <em>buffer_periodical_flush_timing=5.0</em>, <em>buffer_early_flush_level=50</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.logger.BufferedMongoHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#alpha.utils.logger.MongoHandler" title="alpha.utils.logger.MongoHandler"><code class="xref py py-class docutils literal"><span class="pre">alpha.utils.logger.MongoHandler</span></code></a></p>
+<dl class="method">
+<dt id="alpha.utils.logger.BufferedMongoHandler.add_to_buffer">
+<code class="descname">add_to_buffer</code><span class="sig-paren">(</span><em>record</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.logger.BufferedMongoHandler.add_to_buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a formatted record to buffer.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alpha.utils.logger.BufferedMongoHandler.buffer_lock_acquire">
+<code class="descname">buffer_lock_acquire</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.logger.BufferedMongoHandler.buffer_lock_acquire" title="Permalink to this definition">¶</a></dt>
+<dd><p>Acquire lock on buffer (only if periodical flush is set).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alpha.utils.logger.BufferedMongoHandler.buffer_lock_release">
+<code class="descname">buffer_lock_release</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.logger.BufferedMongoHandler.buffer_lock_release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Release lock on buffer (only if periodical flush is set).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alpha.utils.logger.BufferedMongoHandler.destroy">
+<code class="descname">destroy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.logger.BufferedMongoHandler.destroy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clean quit logging. Flush buffer. Stop the periodical thread if needed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alpha.utils.logger.BufferedMongoHandler.emit">
+<code class="descname">emit</code><span class="sig-paren">(</span><em>record</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.logger.BufferedMongoHandler.emit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserting new logging record to buffer and flush if necessary.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alpha.utils.logger.BufferedMongoHandler.empty_buffer">
+<code class="descname">empty_buffer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.logger.BufferedMongoHandler.empty_buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Empty the buffer list.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alpha.utils.logger.BufferedMongoHandler.flush_to_mongo">
+<code class="descname">flush_to_mongo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.logger.BufferedMongoHandler.flush_to_mongo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flush all records to mongo database.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="alpha.utils.logger.Logger">
+<em class="property">class </em><code class="descclassname">alpha.utils.logger.</code><code class="descname">Logger</code><span class="sig-paren">(</span><em>logger_name: str</em>, <em>operation: str</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.logger.Logger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>用于 alpha 的日志类</p>
+<dl class="docutils">
+<dt>logger_name <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>日志名，会同时用于生成 loggerName 和 文件型日志的日志文件</dd>
+<dt>operation <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>操作名，同一类操作名的日志会存放在同一个文件夹下或者同一个collection下</dd>
+</dl>
+<dl class="method">
+<dt id="alpha.utils.logger.Logger.critical">
+<code class="descname">critical</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.logger.Logger.critical" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="alpha.utils.logger.Logger.debug">
+<code class="descname">debug</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.logger.Logger.debug" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="alpha.utils.logger.Logger.error">
+<code class="descname">error</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.logger.Logger.error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="alpha.utils.logger.Logger.info">
+<code class="descname">info</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.logger.Logger.info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="alpha.utils.logger.Logger.warning">
+<code class="descname">warning</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.logger.Logger.warning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="alpha.utils.logger.MongoFormatter">
+<em class="property">class </em><code class="descclassname">alpha.utils.logger.</code><code class="descname">MongoFormatter</code><span class="sig-paren">(</span><em>fmt=None</em>, <em>datefmt=None</em>, <em>style='%'</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.logger.MongoFormatter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">logging.Formatter</span></code></p>
+<dl class="attribute">
+<dt id="alpha.utils.logger.MongoFormatter.DEFAULT_PROPERTIES">
+<code class="descname">DEFAULT_PROPERTIES</code><em class="property"> = dict_keys(['name', 'msg', 'args', 'levelname', 'levelno', 'pathname', 'filename', 'module', 'exc_info', 'exc_text', 'stack_info', 'lineno', 'funcName', 'created', 'msecs', 'relativeCreated', 'thread', 'threadName', 'processName', 'process'])</em><a class="headerlink" href="#alpha.utils.logger.MongoFormatter.DEFAULT_PROPERTIES" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="alpha.utils.logger.MongoFormatter.format">
+<code class="descname">format</code><span class="sig-paren">(</span><em>record: logging.LogRecord</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.logger.MongoFormatter.format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Formats LogRecord into python dictionary.</p>
+<dl class="docutils">
+<dt>record <span class="classifier-delimiter">:</span> <span class="classifier">LogRecord</span></dt>
+<dd>一条日志记录</dd>
+<dt>operation <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>操作类别，可以是更新基础库 base_update，也可以是更新因子 factor_update,
+还可以是 analysis_update 等等</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="alpha.utils.logger.MongoHandler">
+<em class="property">class </em><code class="descclassname">alpha.utils.logger.</code><code class="descname">MongoHandler</code><span class="sig-paren">(</span><em>operation: str</em>, <em>level=0</em>, <em>host='localhost'</em>, <em>port=27017</em>, <em>database_name='logs'</em>, <em>username=None</em>, <em>password=None</em>, <em>authentication_db='admin'</em>, <em>fail_silently=False</em>, <em>formatter=None</em>, <em>capped=False</em>, <em>capped_max=1000</em>, <em>capped_size=1000000</em>, <em>reuse=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.logger.MongoHandler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">logging.Handler</span></code></p>
+<dl class="method">
+<dt id="alpha.utils.logger.MongoHandler.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.logger.MongoHandler.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>If authenticated, logging out and closing mongo database connection.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alpha.utils.logger.MongoHandler.emit">
+<code class="descname">emit</code><span class="sig-paren">(</span><em>record</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.utils.logger.MongoHandler.emit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserting new logging record to mongo database.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-alpha.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-alpha.utils" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">alpha 0.7.5 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, shaw.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
+    </div>
+  </body>
+</html>

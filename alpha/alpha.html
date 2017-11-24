@@ -1,0 +1,3482 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>alpha package &#8212; alpha 0.7.5 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.7.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">alpha 0.7.5 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">alpha package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-alpha.analyzer">alpha.analyzer module</a></li>
+<li><a class="reference internal" href="#module-alpha.barra">alpha.barra module</a></li>
+<li><a class="reference internal" href="#module-alpha.indicator">alpha.indicator module</a></li>
+<li><a class="reference internal" href="#module-alpha.preprocess">alpha.preprocess module</a></li>
+<li><a class="reference internal" href="#module-alpha">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/alpha.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="alpha-package">
+<h1>alpha package<a class="headerlink" href="#alpha-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="alpha.utils.html">alpha.utils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="alpha.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alpha.utils.html#module-alpha.utils.common">alpha.utils.common module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alpha.utils.html#module-alpha.utils.config">alpha.utils.config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alpha.utils.html#module-alpha.utils.engines">alpha.utils.engines module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alpha.utils.html#module-alpha.utils.factor">alpha.utils.factor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alpha.utils.html#module-alpha.utils.logger">alpha.utils.logger module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alpha.utils.html#module-alpha.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-alpha.analyzer">
+<span id="alpha-analyzer-module"></span><h2>alpha.analyzer module<a class="headerlink" href="#module-alpha.analyzer" title="Permalink to this headline">¶</a></h2>
+<p>单因子分析模块</p>
+<dl class="function">
+<dt id="alpha.analyzer.align_data">
+<code class="descclassname">alpha.analyzer.</code><code class="descname">align_data</code><span class="sig-paren">(</span><em>data: list</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.analyzer.align_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>对齐数据。对给定的 Series，按照 <strong>共同</strong> index 进行对齐</p>
+<dl class="docutils">
+<dt>data <span class="classifier-delimiter">:</span> <span class="classifier">list of Series or DataFrame</span></dt>
+<dd>Series or DataFrame 序列，通常都有同类型的 index</dd>
+</dl>
+<dl class="docutils">
+<dt>DataFrame</dt>
+<dd>将所有 series or DataFrame 按照共同 index 合并而成的 DataFrame</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.analyzer.cal_aligned_data">
+<code class="descclassname">alpha.analyzer.</code><code class="descname">cal_aligned_data</code><span class="sig-paren">(</span><em>prices</em>, <em>factor</em>, <em>period</em>, <em>industries=None</em>, <em>demean_by=None</em>, <em>compound=True</em>, <em>number=0</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.analyzer.cal_aligned_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>通过价格计算收益率，并于因子数据对齐，如果有行业数据，也对齐</p>
+<dl class="docutils">
+<dt>对齐逻辑：</dt>
+<dd><ul class="first last simple">
+<li>当前收益率为过去 period 个交易日的收益率的复合增长率</li>
+<li>当前因子值为 period 前个交易日的因子值</li>
+<li>当前行业为 period 前个交易日的行业</li>
+</ul>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>prices <span class="classifier-delimiter">:</span> <span class="classifier">pd.Series</span></dt>
+<dd>价格数据，index 为 [date, sid]</dd>
+<dt>factor <span class="classifier-delimiter">:</span> <span class="classifier">pd.Series or pd.DataFrame</span></dt>
+<dd>因子数据，index 为[date, sid]</dd>
+<dt>period <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>用于计算收益率的周期
+仅支持 ** 单期 ** 计算</dd>
+<dt>industries <span class="classifier-delimiter">:</span> <span class="classifier">pd.Series,default None</span></dt>
+<dd>行业数据，index 为[date, sid]</dd>
+<dt>demean_by <span class="classifier-delimiter">:</span> <span class="classifier">str, default None</span></dt>
+<dd>收益率是否去中心化，’market’表示全市场去中心化，’industry’表示行业去中心化，None 表示不去中心化</dd>
+<dt>compound <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>收益率是否折算为复合增长率，默认为 True</dd>
+<dt>number <span class="classifier-delimiter">:</span> <span class="classifier">int, default 0</span></dt>
+<dd>收益率 <strong>向前</strong> 移动的期数，主要用来计算因子衰减</dd>
+</dl>
+<dl class="docutils">
+<dt>DataFrame</dt>
+<dd>对齐的收益率(return)、因子值(factor)，如果有行业，index 增加 industry</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.analyzer.cal_factor_alpha_beta">
+<code class="descclassname">alpha.analyzer.</code><code class="descname">cal_factor_alpha_beta</code><span class="sig-paren">(</span><em>aligned_data</em>, <em>factor_name='factor'</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.analyzer.cal_factor_alpha_beta" title="Permalink to this definition">¶</a></dt>
+<dd><p>计算单因子alpha和beta，方法为以因子值为权重构造组合对等权重组合回归</p>
+<p>计算的是全部数据的 alpha 及 beta</p>
+<dl class="docutils">
+<dt>aligned_data <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame</span></dt>
+<dd>对齐的因子值和后向收益组成的 DataFrame
+平移的含义请参考 cal_aligned_factor_and_returns</dd>
+<dt>factor_name <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>需要处理的因子名称，默认为 factor</dd>
+</dl>
+<dl class="docutils">
+<dt>Series</dt>
+<dd><p class="first">因子的年化 alpha 和 beta，形如下：</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="16%" />
+<col width="84%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>index</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>alpha</td>
+<td>0.134682</td>
+</tr>
+<tr class="row-odd"><td>beta</td>
+<td>-0.071433</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.analyzer.cal_factor_half_life">
+<code class="descclassname">alpha.analyzer.</code><code class="descname">cal_factor_half_life</code><span class="sig-paren">(</span><em>prices</em>, <em>factor</em>, <em>period</em>, <em>industries=None</em>, <em>demean_by=None</em>, <em>max_num=500</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.analyzer.cal_factor_half_life" title="Permalink to this definition">¶</a></dt>
+<dd><p>计算因子的半衰竭期</p>
+<dl class="docutils">
+<dt>prices <span class="classifier-delimiter">:</span> <span class="classifier">pd.Series</span></dt>
+<dd>价格数据，index 为 [date, sid]</dd>
+<dt>factor <span class="classifier-delimiter">:</span> <span class="classifier">pd.Series</span></dt>
+<dd>因子数据，index 为[date, sid]</dd>
+<dt>period <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>用于计算收益率的周期
+仅支持 ** 单期 ** 计算</dd>
+<dt>industries <span class="classifier-delimiter">:</span> <span class="classifier">pd.Series,default None</span></dt>
+<dd>行业数据，index 为[date, sid]</dd>
+<dt>demean_by <span class="classifier-delimiter">:</span> <span class="classifier">str, default None</span></dt>
+<dd>去中心化，’market’表示全市场去中心化，’industry’表示行业去中心化，None 表示不去中心化</dd>
+<dt>max_num <span class="classifier-delimiter">:</span> <span class="classifier">int, default 500</span></dt>
+<dd>最大迭代次数</dd>
+</dl>
+<dl class="docutils">
+<dt>tuple</dt>
+<dd>半衰竭期，及各期的ic均值</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.analyzer.cal_factor_rank_autocorr">
+<code class="descclassname">alpha.analyzer.</code><code class="descname">cal_factor_rank_autocorr</code><span class="sig-paren">(</span><em>factor</em>, <em>lag</em>, <em>by_industry=False</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.analyzer.cal_factor_rank_autocorr" title="Permalink to this definition">¶</a></dt>
+<dd><p>计算因子值排序的自相关系数</p>
+<dl class="docutils">
+<dt>factor <span class="classifier-delimiter">:</span> <span class="classifier">pd.Series</span></dt>
+<dd>包含单个因子值的 Series，index 为 [date, sid, industry]</dd>
+<dt>lag <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>自相关系数计算滞后期长度</dd>
+<dt>by_industry <span class="classifier-delimiter">:</span> <span class="classifier">boolean, default False</span></dt>
+<dd>为真时，对每个行业计算自相关，否则对全市场计算自相关</dd>
+</dl>
+<dl class="docutils">
+<dt>atuocorr <span class="classifier-delimiter">:</span> <span class="classifier">pd.Series</span></dt>
+<dd>给定因子值与滞后期的相关系数，index 为 [date] 或 [date, industry]</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.analyzer.cal_ic">
+<code class="descclassname">alpha.analyzer.</code><code class="descname">cal_ic</code><span class="sig-paren">(</span><em>aligned_data</em>, <em>by_industry=False</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.analyzer.cal_ic" title="Permalink to this definition">¶</a></dt>
+<dd><p>计算因子的信息系数（秩相关系数）</p>
+<p>请确保传入的参数已经清洗完毕，并是 <strong>排序过的</strong>，该函数只负责计算逻辑</p>
+<dl class="docutils">
+<dt>aligned_data <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame</span></dt>
+<dd>对齐的因子值和后向收益组成的 DataFrame
+平移的含义请参考 cal_aligned_data</dd>
+<dt>by_industry <span class="classifier-delimiter">:</span> <span class="classifier">boolean, default False</span></dt>
+<dd>为真时，对每个行业计算 IC，否则对全市场计算 IC</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.Series</dt>
+<dd>ic值，也即因子值与后向收益的秩相关系数
+index 为 [date] 或 [date, industry]</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.analyzer.cal_ic_statistics">
+<code class="descclassname">alpha.analyzer.</code><code class="descname">cal_ic_statistics</code><span class="sig-paren">(</span><em>ic</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.analyzer.cal_ic_statistics" title="Permalink to this definition">¶</a></dt>
+<dd><p>对因子值进行简单的统计分析，计算 IC 的均值、方差、T统计量、p值、偏度、
+峰度及信息比</p>
+<dl class="docutils">
+<dt>ic <span class="classifier-delimiter">:</span> <span class="classifier">pd.Series</span></dt>
+<dd>ic值，也即因子值与后向收益的秩相关系数，index 为 [date] 或 [date, industry]</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.Series</dt>
+<dd>ic统计量，index 为 [stats] 或 [stats, industry]</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.analyzer.cal_monthly_ic">
+<code class="descclassname">alpha.analyzer.</code><code class="descname">cal_monthly_ic</code><span class="sig-paren">(</span><em>ic</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.analyzer.cal_monthly_ic" title="Permalink to this definition">¶</a></dt>
+<dd><p>计算因子 ic 月均值</p>
+<dl class="docutils">
+<dt>ic <span class="classifier-delimiter">:</span> <span class="classifier">pd.Series</span></dt>
+<dd>ic值，也即因子值与后向收益的秩相关系数, index 为 [date] 或 [date, industry]</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.Series</dt>
+<dd>因子 ic 月均值，index 为 [year, month] 或 [year, month, industry]</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.analyzer.cal_quantile_excess_returns">
+<code class="descclassname">alpha.analyzer.</code><code class="descname">cal_quantile_excess_returns</code><span class="sig-paren">(</span><em>quantile_returns</em>, <em>long_quant</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.analyzer.cal_quantile_excess_returns" title="Permalink to this definition">¶</a></dt>
+<dd><p>计算指定分组相对市场平均的超额收益</p>
+<p>如果 quantile_returns 是按照行业计算的，那么最终的spread也是按行业计算的</p>
+<dl class="docutils">
+<dt>quantile_returns <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame</span></dt>
+<dd>分组的收益率，index 为 [date, quantile]，可能包含 industry</dd>
+<dt>long_quant <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>做多分组</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.Series</dt>
+<dd><p class="first">指定分位数分组的收益的差</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="26%" />
+<col width="74%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>date</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>2016-01-04</td>
+<td>0.006298</td>
+</tr>
+<tr class="row-odd"><td>2016-01-05</td>
+<td>0.005999</td>
+</tr>
+<tr class="row-even"><td>2016-01-06</td>
+<td>0.012243</td>
+</tr>
+<tr class="row-odd"><td>2016-01-07</td>
+<td>0.001807</td>
+</tr>
+<tr class="row-even"><td>2016-01-08</td>
+<td>0.004710</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.analyzer.cal_quantile_returns">
+<code class="descclassname">alpha.analyzer.</code><code class="descname">cal_quantile_returns</code><span class="sig-paren">(</span><em>quantized_factor</em>, <em>returns</em>, <em>quantity=5</em>, <em>by_industry=False</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.analyzer.cal_quantile_returns" title="Permalink to this definition">¶</a></dt>
+<dd><p>计算不同分组内股票的平均收益</p>
+<dl class="docutils">
+<dt>quantized_factor <span class="classifier-delimiter">:</span> <span class="classifier">pd.Series</span></dt>
+<dd>分完组之后的因子，index保持不变，值为 quantile</dd>
+<dt>returns <span class="classifier-delimiter">:</span> <span class="classifier">pd.Series</span></dt>
+<dd>对齐完之后的收益</dd>
+<dt>quantity <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>分组数量，默认为 5</dd>
+<dt>by_industry <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>是否按照行业计算，默认为否</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.Series</dt>
+<dd><p class="first">分组的收益率，index 为 [date, quantile]</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="14%" />
+<col width="11%" />
+<col width="11%" />
+<col width="64%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>date</td>
+<td>industry</td>
+<td>quantile</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>2016-01-04</td>
+<td>金融地产</td>
+<td>1</td>
+<td>0.001432</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td>金融地产</td>
+<td>2</td>
+<td>-0.003714</td>
+</tr>
+<tr class="row-even"><td></td>
+<td>医药卫生</td>
+<td>3</td>
+<td>-0.002191</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td>工业</td>
+<td>4</td>
+<td>-0.003274</td>
+</tr>
+<tr class="row-even"><td></td>
+<td>金融地产</td>
+<td>5</td>
+<td>0.007731</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.analyzer.cal_quantile_spread">
+<code class="descclassname">alpha.analyzer.</code><code class="descname">cal_quantile_spread</code><span class="sig-paren">(</span><em>quantile_returns</em>, <em>upper_quant</em>, <em>lower_quant</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.analyzer.cal_quantile_spread" title="Permalink to this definition">¶</a></dt>
+<dd><p>计算两个分位数分组之间的平均收益差。</p>
+<p>如果 quantile_returns 是按照行业计算的，那么最终的spread也是按行业计算的</p>
+<dl class="docutils">
+<dt>quantile_returns <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame</span></dt>
+<dd>分组的收益率，index 为 [date, quantile]，可能包含 industry</dd>
+<dt>upper_quant <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>上分组，即做多的分组</dd>
+<dt>lower_quant <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>下分组，即做空的分组</dd>
+<dt>by_industry <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>是否按照行业计算，默认为否</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.Series</dt>
+<dd><p class="first">指定分位数分组的收益的差(下面是按行业的情形，否则一天只有一个数据)</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="18%" />
+<col width="15%" />
+<col width="67%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>date</td>
+<td>industry</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>2016-01-04</td>
+<td>金融地产</td>
+<td>0.016298</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td>医药卫生</td>
+<td>0.012323</td>
+</tr>
+<tr class="row-even"><td></td>
+<td>工业</td>
+<td>0.000807</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.analyzer.cal_quantile_turnover">
+<code class="descclassname">alpha.analyzer.</code><code class="descname">cal_quantile_turnover</code><span class="sig-paren">(</span><em>quantized_factor</em>, <em>period</em>, <em>quantity=10</em>, <em>by_industry=False</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.analyzer.cal_quantile_turnover" title="Permalink to this definition">¶</a></dt>
+<dd><p>计算换手率，以期初和期末的同一分位数的组合的重名比例衡量。</p>
+<dl class="docutils">
+<dt>quantized_factor <span class="classifier-delimiter">:</span> <span class="classifier">pd.Series</span></dt>
+<dd>分完组之后的因子，index保持不变，值为 quantile</dd>
+<dt>period: int, optional</dt>
+<dd>用于计算后向收益率的周期，仅支持 ** 单期 ** 计算</dd>
+<dt>quantity <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>分组数量，默认为 10</dd>
+<dt>by_industry <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>是否按照行业计算，默认为否</dd>
+</dl>
+<dl class="docutils">
+<dt>Series</dt>
+<dd><p class="first">各组换手率, index 为 [date, quantile]</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="12%" />
+<col width="11%" />
+<col width="12%" />
+<col width="64%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>date</td>
+<td>quantile</td>
+<td>industry</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>2017-06-21</td>
+<td>5.0</td>
+<td>轻工制造</td>
+<td>0.125000</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td>通信</td>
+<td>0.111111</td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td>钢铁</td>
+<td>0.000000</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td>非银行金融</td>
+<td>0.000000</td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td>食品饮料</td>
+<td>0.058824</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.analyzer.cal_returns">
+<code class="descclassname">alpha.analyzer.</code><code class="descname">cal_returns</code><span class="sig-paren">(</span><em>prices</em>, <em>period</em>, <em>number=0</em>, <em>compound=True</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.analyzer.cal_returns" title="Permalink to this definition">¶</a></dt>
+<dd><p>计算给定股票 N 期的收益，当天的收益是过去 period 的区间收益折算的复合增长率。公式如下</p>
+<p>$$
+r_t = (p_t / p_{t - N})^{1/N} - 1
+$$</p>
+<dl class="docutils">
+<dt>prices <span class="classifier-delimiter">:</span> <span class="classifier">Series</span></dt>
+<dd>用于计算收益的价格数据，index 为 [date, sid]，
+价格的时间区间必须能够覆盖整个因子分析区间，并且要加上一个足够长的窗口时间
+来计算第一期收益率。</dd>
+<dt>period <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>用于计算收益率的周期
+仅支持 ** 单期 ** 计算</dd>
+<dt>number <span class="classifier-delimiter">:</span> <span class="classifier">int, default 0</span></dt>
+<dd>把收益率向前移 number 个 period，计算因子衰竭时使用到</dd>
+<dt>compound <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>是否折算为复合增长率，默认为 True</dd>
+</dl>
+<dl class="docutils">
+<dt>Series</dt>
+<dd>收益，index为[date, sid]</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.analyzer.cal_rolling_ic">
+<code class="descclassname">alpha.analyzer.</code><code class="descname">cal_rolling_ic</code><span class="sig-paren">(</span><em>ic</em>, <em>period</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.analyzer.cal_rolling_ic" title="Permalink to this definition">¶</a></dt>
+<dd><p>计算因子 ic 滚动均值、标准差与IR</p>
+<dl class="docutils">
+<dt>ic <span class="classifier-delimiter">:</span> <span class="classifier">pd.Series</span></dt>
+<dd>ic值,也即因子值与后向收益的秩相关系数
+index 为 [date, name] 或 [date, name, industry]</dd>
+</dl>
+<p>period : 滚动周期，单位为交易日</p>
+<dl class="docutils">
+<dt>pd.DataFrame</dt>
+<dd>因子 ic 滚动均值、标准差与IR
+index 为 [name, date] 或 [name, industry, date]</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.analyzer.cal_rolling_spread">
+<code class="descclassname">alpha.analyzer.</code><code class="descname">cal_rolling_spread</code><span class="sig-paren">(</span><em>spread</em>, <em>period</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.analyzer.cal_rolling_spread" title="Permalink to this definition">¶</a></dt>
+<dd><p>计算因子滚动多空收益、波动率</p>
+<dl class="docutils">
+<dt>spread <span class="classifier-delimiter">:</span> <span class="classifier">pd.Series</span></dt>
+<dd>因子多空收益
+index 为 [date, name] 或 [date, name, industry]</dd>
+</dl>
+<p>period : 滚动周期，单位为交易日</p>
+<dl class="docutils">
+<dt>pd.DataFrame</dt>
+<dd>滚动多空年化收益率、年化波动率与夏普比率（无风险收益率为0）
+index 为 [name, date] 或 [name, industry, date]</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.analyzer.compare_quantile_return">
+<code class="descclassname">alpha.analyzer.</code><code class="descname">compare_quantile_return</code><span class="sig-paren">(</span><em>aligned_data</em>, <em>target_factor</em>, <em>extra_factor=None</em>, <em>quantity=5</em>, <em>upper_quant=5</em>, <em>lower_quant=1</em>, <em>by_industry=False</em>, <em>weight=None</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.analyzer.compare_quantile_return" title="Permalink to this definition">¶</a></dt>
+<dd><p>比较因子分组多空收益和因子回归收益</p>
+<dl class="docutils">
+<dt>aligned_data <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame</span></dt>
+<dd>含股票收益率和因子值的对齐数据，index 为 [date, sid]
+因子值是未纯化的数值,必须包含lcap因子</dd>
+<dt>target_factor <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>需要将业绩归因到的因子名称</dd>
+<dt>extra_factor <span class="classifier-delimiter">:</span> <span class="classifier">str or list of str</span></dt>
+<dd>额外的因子，譬如是 lcap，剔除市值因子的影响</dd>
+<dt>quantity <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>分组数量，默认为 5</dd>
+<dt>upper_quant <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>上分组，即做多的分组</dd>
+<dt>lower_quant <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>下分组，即做空的分组</dd>
+<dt>by_industry <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>是否按照行业计算，默认为否</dd>
+<dt>weight ： str</dt>
+<dd>分组内个股加权方式，默认为等权</dd>
+</dl>
+<dl class="docutils">
+<dt>factor_return <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame</span></dt>
+<dd>fr : 归因到target_factor 的因子收益，表示单位暴露度的因子组合的收益
+qr_spread ： 指定分位数分组的收益的差
+fr_spread : 因子收益与指定分位数分组的暴露度的差的乘积，即指定多空分组的理论收益
+exposure : 多空分组的暴露度</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.analyzer.quantize_factor">
+<code class="descclassname">alpha.analyzer.</code><code class="descname">quantize_factor</code><span class="sig-paren">(</span><em>factor_cleaned</em>, <em>quantity=5</em>, <em>by_industry=False</em>, <em>min_num=30</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.analyzer.quantize_factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>对 <strong>单个</strong> 因子按全市场分组</p>
+<p>不同行业因子值有显著区别，可以选择行业内分组</p>
+<dl class="docutils">
+<dt>factor_cleaned <span class="classifier-delimiter">:</span> <span class="classifier">pd.Series</span></dt>
+<dd>清洗过之后的因子值，index 为 [date, sid] 可能带有 industry</dd>
+<dt>quantity <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>分组数量</dd>
+<dt>by_industry <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>是否按行业分组，默认为 False</dd>
+<dt>min_num <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>最小多少个因子值才进行分组，默认为 30</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.Series</dt>
+<dd><p class="first">因子分组 Series，index 为 [date, sid, industry]</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="13%" />
+<col width="14%" />
+<col width="12%" />
+<col width="61%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>date</td>
+<td>sid</td>
+<td>industry</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>2016-01-04</td>
+<td>000001.XSHE</td>
+<td>金融地产</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td>000002.XSHE</td>
+<td>金融地产</td>
+<td>3</td>
+</tr>
+<tr class="row-even"><td></td>
+<td>000004.XSHE</td>
+<td>医药卫生</td>
+<td>5</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td>000005.XSHE</td>
+<td>工业</td>
+<td>2</td>
+</tr>
+<tr class="row-even"><td></td>
+<td>000006.XSHE</td>
+<td>金融地产</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-alpha.barra">
+<span id="alpha-barra-module"></span><h2>alpha.barra module<a class="headerlink" href="#module-alpha.barra" title="Permalink to this headline">¶</a></h2>
+<p>barra 接口模块</p>
+<dl class="class">
+<dt id="alpha.barra.AnalysisReport">
+<em class="property">class </em><code class="descclassname">alpha.barra.</code><code class="descname">AnalysisReport</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.barra.AnalysisReport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>业绩归因报告</p>
+<dl class="attribute">
+<dt id="alpha.barra.AnalysisReport.data">
+<code class="descname">data</code><a class="headerlink" href="#alpha.barra.AnalysisReport.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>dict of DataFrame 组成的全部分析报告</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="alpha.barra.AnalysisReport.plot_annualized_attr">
+<code class="descname">plot_annualized_attr</code><span class="sig-paren">(</span><em>data_type='factors'</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.barra.AnalysisReport.plot_annualized_attr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Annualized Attribution Graph</p>
+<dl class="docutils">
+<dt>data_type <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>画图数据，行业或者因子
+- sectors 行业
+- factors 因子</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="alpha.barra.AnalysisReport.plot_attri_tree">
+<code class="descname">plot_attri_tree</code><span class="sig-paren">(</span><em>data_type='a'</em>, <em>portfolio_name=''</em>, <em>benchmark=''</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.barra.AnalysisReport.plot_attri_tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>画收益分解树图，年化或累计</p>
+<dl class="docutils">
+<dt>data_type <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>画图数据，是年化的收益分解图，还是累计的分解图
+- a: annualized 年化
+- c: cumulative 累计</dd>
+<dt>portfolio_name <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>组合名称，用于显示用，如果不设置，将不显示</dd>
+<dt>benchmark <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>比较基准名称，用于显示用，如果不设置，将不显示</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="alpha.barra.AnalysisReport.plot_box_exposure">
+<code class="descname">plot_box_exposure</code><span class="sig-paren">(</span><em>data_type='factors'</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.barra.AnalysisReport.plot_box_exposure" title="Permalink to this definition">¶</a></dt>
+<dd><p>因子暴露值</p>
+<dl class="docutils">
+<dt>data_type <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>画图数据，行业或者因子
+- sectors 行业
+- factors 因子</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="alpha.barra.AnalysisReport.plot_cummulative_attr">
+<code class="descname">plot_cummulative_attr</code><span class="sig-paren">(</span><em>data_type='factors'</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.barra.AnalysisReport.plot_cummulative_attr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cumulative Attribution Graph</p>
+<dl class="docutils">
+<dt>data_type <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>画图数据，行业或者因子
+- sectors 行业
+- factors 因子</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="alpha.barra.AnalysisReport.plot_ts_cumulative_attr">
+<code class="descname">plot_ts_cumulative_attr</code><span class="sig-paren">(</span><em>data_type='factors'</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.barra.AnalysisReport.plot_ts_cumulative_attr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Monthly/Daily Cumulative Attribution Graph</p>
+<dl class="docutils">
+<dt>data_type <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>画图数据，行业或者因子
+- sectors 行业
+- factors 因子</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="alpha.barra.AnalysisReport.plot_ts_exposure">
+<code class="descname">plot_ts_exposure</code><span class="sig-paren">(</span><em>data_type='factors'</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.barra.AnalysisReport.plot_ts_exposure" title="Permalink to this definition">¶</a></dt>
+<dd><p>因子暴露值</p>
+<dl class="docutils">
+<dt>data_type <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>画图数据，行业或者因子
+- sectors 行业
+- factors 因子</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="alpha.barra.AnalysisReport.set_size">
+<code class="descname">set_size</code><span class="sig-paren">(</span><em>width=16</em>, <em>height=9</em>, <em>font_size=14</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.barra.AnalysisReport.set_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>设置当前 Report 的通用图形大小，不设置则使用默认大小</p>
+<dl class="docutils">
+<dt>width <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>图像显示的宽度，单位 英寸</dd>
+<dt>height <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>图像显示的高度，单位 英寸</dd>
+<dt>font_size <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>字体大小</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="alpha.barra.AnalysisReport.summary">
+<code class="descname">summary</code><span class="sig-paren">(</span><em>data_type='a'</em>, <em>top=5</em>, <em>fmt='html'</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.barra.AnalysisReport.summary" title="Permalink to this definition">¶</a></dt>
+<dd><p>分析报告概要</p>
+<dl class="docutils">
+<dt>data_type <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>分析数据，是年化的收益分解，还是累计的分解
+- a: annualized 年化
+- c: cumulative 累计</dd>
+<dt>top <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>风格和行业因子对收益贡献的前 top 名，默认为 5</dd>
+<dt>fmt <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><ul class="first last simple">
+<li>html notebook中显示为好看的表格</li>
+<li>simple 普通显示，用于非 notebook 模式</li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="alpha.barra.Barra">
+<em class="property">class </em><code class="descclassname">alpha.barra.</code><code class="descname">Barra</code><a class="headerlink" href="#alpha.barra.Barra" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>barra 连接类</p>
+<dl class="method">
+<dt id="alpha.barra.Barra.do_attribution">
+<code class="descname">do_attribution</code><span class="sig-paren">(</span><em>portfolio</em>, <em>name</em>, <em>bench</em>, <em>start_date=None</em>, <em>end_date=None</em>, <em>freq='monthly'</em>, <em>time_out=60</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.barra.Barra.do_attribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>对投资组合持仓进行归因</p>
+<p>如果是月度归因，给定的数据默认是 <strong>月底</strong></p>
+<dl class="docutils">
+<dt>portfolio <span class="classifier-delimiter">:</span> <span class="classifier">DataFrame</span></dt>
+<dd><p class="first">投资组合的数据，必须至少包含 date, sid, quantity 列</p>
+<p class="last">若包含现金，现金的sid为 ‘cash’</p>
+</dd>
+<dt>name <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>组合的名称</dd>
+<dt>bench <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>归因时使用的基准</dd>
+<dt>start_date <span class="classifier-delimiter">:</span> <span class="classifier">str or None</span></dt>
+<dd>起始日期</dd>
+<dt>end_date <span class="classifier-delimiter">:</span> <span class="classifier">str or None</span></dt>
+<dd>截止日期</dd>
+<dt>freq <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>频率，daily or monthly</dd>
+<dt>month_end <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>是否是月末数据，当频率是 monthly 时可以设置</dd>
+<dt>time_out <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>超时秒数，默认为 60，如果需要永不超时，请设置为 0（负数也可）</dd>
+</dl>
+<dl class="docutils">
+<dt>dict</dt>
+<dd>业绩归因结果</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="alpha.barra.Barra.do_optimization">
+<code class="descname">do_optimization</code><span class="sig-paren">(</span><em>name</em>, <em>universe</em>, <em>bench</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.barra.Barra.do_optimization" title="Permalink to this definition">¶</a></dt>
+<dd><p>对指定股票池进行优化</p>
+<dl class="docutils">
+<dt>name <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>组合名称</dd>
+<dt>universe <span class="classifier-delimiter">:</span> <span class="classifier">DataFrame</span></dt>
+<dd><p class="first">代表初始股票池的数据，可以是多日的
+如果要提供打分，请提供 score 字段</p>
+<blockquote class="last">
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="34%" />
+<col width="29%" />
+<col width="37%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">date</th>
+<th class="head">sid</th>
+<th class="head">weight</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>2010-01-04</td>
+<td>1600030</td>
+<td>6.630468e+09</td>
+</tr>
+<tr class="row-odd"><td>2010-01-04</td>
+<td>1600812</td>
+<td>1.028578e+09</td>
+</tr>
+<tr class="row-even"><td>2010-01-04</td>
+<td>1000898</td>
+<td>6.149008e+09</td>
+</tr>
+<tr class="row-odd"><td>2010-01-04</td>
+<td>1000009</td>
+<td>1.090751e+09</td>
+</tr>
+<tr class="row-even"><td>2010-01-04</td>
+<td>1600221</td>
+<td>3.345530e+09</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</dd>
+<dt>kwargs <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><dl class="first docutils">
+<dt>非优化参数：</dt>
+<dd>time_out : 超时秒数，默认为 60，如果需要永不超时，请设置为 0（负数也可）
+weight_type : 权重类型，share 股数 weight 比例</dd>
+<dt>统一敞口参数：</dt>
+<dd><dl class="first last docutils">
+<dt>factors_exposure <span class="classifier-delimiter">:</span> <span class="classifier">统一风险因子敞口，表示偏离基准正负值，非负，默认为 10.0</span></dt>
+<dd>设置后仍可以设置单独因子敞口</dd>
+<dt>sectors_exposure <span class="classifier-delimiter">:</span> <span class="classifier">统一行业因子敞口，表示偏离基准百分比，非负，默认为 0.01</span></dt>
+<dd>设置后仍可以设置单独因子敞口</dd>
+</dl>
+</dd>
+</dl>
+<p>其他优化参数列表：</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="21%" />
+<col width="13%" />
+<col width="66%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">参数</th>
+<th class="head">默认值</th>
+<th class="head">说明</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>benchmark</td>
+<td></td>
+<td>基准</td>
+</tr>
+<tr class="row-odd"><td>optType</td>
+<td>1</td>
+<td>optimization type 优化目标</td>
+</tr>
+<tr class="row-even"><td>objectiveType</td>
+<td>0</td>
+<td><dl class="first last docutils">
+<dt>优化目标类型</dt>
+<dd><ul class="first last simple">
+<li>0: Utility</li>
+<li>1: SharpeRatio</li>
+<li>2: Infomation  Ratio</li>
+</ul>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td>bMaxAssets</td>
+<td>1</td>
+<td>trading部分，是否控制持仓数量上限</td>
+</tr>
+<tr class="row-even"><td>iMaxAssets</td>
+<td>4000</td>
+<td>trading部分，持仓数量上限</td>
+</tr>
+<tr class="row-odd"><td>bMinAssets</td>
+<td>1</td>
+<td>trading部分，是否控制持仓数量下限</td>
+</tr>
+<tr class="row-even"><td>iMinAssets</td>
+<td>1</td>
+<td>trading部分，持仓数量下限</td>
+</tr>
+<tr class="row-odd"><td>bapply_conditionalrule</td>
+<td>1</td>
+<td>holdings部分，是否启用conditional rule</td>
+</tr>
+<tr class="row-even"><td>Aggregate Upper Bound</td>
+<td>1</td>
+<td>holdings部分</td>
+</tr>
+<tr class="row-odd"><td>Aggregate Threshold</td>
+<td>1</td>
+<td>holdings部分，权重超过此值的股票权重之各不超过Aggregate Upper Bound</td>
+</tr>
+<tr class="row-even"><td>Individual Upper Bound</td>
+<td>1</td>
+<td>holdings部分，个股权重，1指100%</td>
+</tr>
+<tr class="row-odd"><td>beta_less</td>
+<td>-10</td>
+<td>风格因子控制(以下，敞口大小)</td>
+</tr>
+<tr class="row-even"><td>beta_more</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td>btop_less</td>
+<td>-10</td>
+<td></td>
+</tr>
+<tr class="row-even"><td>btop_more</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td>earnyild_less</td>
+<td>-10</td>
+<td></td>
+</tr>
+<tr class="row-even"><td>earnyild_more</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td>growth_less</td>
+<td>-10</td>
+<td></td>
+</tr>
+<tr class="row-even"><td>growth_more</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td>leverage_less</td>
+<td>-10</td>
+<td></td>
+</tr>
+<tr class="row-even"><td>leverage_more</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td>liquidty_less</td>
+<td>-10</td>
+<td></td>
+</tr>
+<tr class="row-even"><td>liquidty_more</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td>momentum_less</td>
+<td>-10</td>
+<td></td>
+</tr>
+<tr class="row-even"><td>momentum_more</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td>sizenl_less</td>
+<td>-10</td>
+<td></td>
+</tr>
+<tr class="row-even"><td>sizenl_more</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td>resvol_less</td>
+<td>-10</td>
+<td></td>
+</tr>
+<tr class="row-even"><td>resvol_more</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td>size_less</td>
+<td>-10</td>
+<td></td>
+</tr>
+<tr class="row-even"><td>size_more</td>
+<td>10</td>
+<td>风格因子控制(以上)</td>
+</tr>
+<tr class="row-odd"><td>consumer_discretionary_less</td>
+<td>-0.05</td>
+<td>sectores行业控制（以下，行业权重比例）</td>
+</tr>
+<tr class="row-even"><td>consumer_discretionary_more</td>
+<td>0.05</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td>consumer_staples_less</td>
+<td>-0.05</td>
+<td></td>
+</tr>
+<tr class="row-even"><td>consumer_staples_more</td>
+<td>0.05</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td>energy_less</td>
+<td>-0.05</td>
+<td></td>
+</tr>
+<tr class="row-even"><td>energy_more</td>
+<td>0.05</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td>financials_less</td>
+<td>-0.05</td>
+<td></td>
+</tr>
+<tr class="row-even"><td>financials_more</td>
+<td>0.05</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td>health_care_less</td>
+<td>-0.05</td>
+<td></td>
+</tr>
+<tr class="row-even"><td>health_care_more</td>
+<td>0.05</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td>industrials_less</td>
+<td>-0.05</td>
+<td></td>
+</tr>
+<tr class="row-even"><td>industrials_more</td>
+<td>0.05</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td>it_less</td>
+<td>-0.05</td>
+<td></td>
+</tr>
+<tr class="row-even"><td>it_more</td>
+<td>0.05</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td>materials_less</td>
+<td>-0.05</td>
+<td></td>
+</tr>
+<tr class="row-even"><td>materials_more</td>
+<td>0.05</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td>utilities_less</td>
+<td>-0.05</td>
+<td></td>
+</tr>
+<tr class="row-even"><td>utilities_more</td>
+<td>0.05</td>
+<td>sectores行业控制（以上）</td>
+</tr>
+<tr class="row-odd"><td>market</td>
+<td></td>
+<td>市场</td>
+</tr>
+<tr class="row-even"><td>pCostPerShare</td>
+<td>0.0</td>
+<td>barra default 0</td>
+</tr>
+<tr class="row-odd"><td>sCostPerShare</td>
+<td>0.0</td>
+<td>barra default 0</td>
+</tr>
+<tr class="row-even"><td>FactRetType</td>
+<td>0</td>
+<td>barra default 0</td>
+</tr>
+<tr class="row-odd"><td>AsstRetType</td>
+<td>0</td>
+<td><dl class="first last docutils">
+<dt>expected returns-return type,</dt>
+<dd><ul class="first last simple">
+<li>0: total</li>
+<li>4: excess</li>
+</ul>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td>mim_flag</td>
+<td>0</td>
+<td>barra default 0</td>
+</tr>
+<tr class="row-odd"><td>ssCostPercent</td>
+<td>0.0</td>
+<td>barra default 0</td>
+</tr>
+<tr class="row-even"><td>BmkSurprise</td>
+<td>0.0</td>
+<td>barra default 0</td>
+</tr>
+<tr class="row-odd"><td>ReturnMult</td>
+<td>1.0</td>
+<td>expected returns-return multiplier</td>
+</tr>
+<tr class="row-even"><td>RiskFreeReturn</td>
+<td>0.0</td>
+<td>expected returns-refinement-risk free，无风险利率</td>
+</tr>
+<tr class="row-odd"><td>holding_period</td>
+<td>1.0</td>
+<td>transaction costs holding period(years)</td>
+</tr>
+<tr class="row-even"><td>ssCostPerShare</td>
+<td>0.0</td>
+<td>barra default 0</td>
+</tr>
+<tr class="row-odd"><td>comission_flag</td>
+<td>1</td>
+<td>barra  efault 1</td>
+</tr>
+<tr class="row-even"><td>trade_skill</td>
+<td>1.0</td>
+<td>transaction costs-market impact model-trading skill</td>
+</tr>
+<tr class="row-odd"><td>ann_turnover</td>
+<td>100.0</td>
+<td>transaction costs-market impact model-annual turnover(%)</td>
+</tr>
+<tr class="row-even"><td>trade_mult</td>
+<td>1.0</td>
+<td>transaction costs-market impact model-advanced-trade multiplier</td>
+</tr>
+<tr class="row-odd"><td>rebal_per_year</td>
+<td>12</td>
+<td>transaction costs-market impact model-advanced-rebalances/Year</td>
+</tr>
+<tr class="row-even"><td>weight_scheme</td>
+<td>1</td>
+<td>barra default 1</td>
+</tr>
+<tr class="row-odd"><td>cross_flag</td>
+<td>0</td>
+<td>barra default 0</td>
+</tr>
+<tr class="row-even"><td>UpperGenBound</td>
+<td>1.0</td>
+<td>barra default 1</td>
+</tr>
+<tr class="row-odd"><td>LowerGenBound</td>
+<td>0.0</td>
+<td>barra default 0</td>
+</tr>
+<tr class="row-even"><td>RoundLotTrans</td>
+<td>0.0</td>
+<td>barra default 0</td>
+</tr>
+<tr class="row-odd"><td>RetDistrType</td>
+<td>RAR</td>
+<td>barra default</td>
+</tr>
+<tr class="row-even"><td>RetDistrMean</td>
+<td>ZERO</td>
+<td>return distribution-mean return, default <strong>ZERO</strong></td>
+</tr>
+<tr class="row-odd"><td>RetDistrProbab</td>
+<td>5</td>
+<td>return distribution-probability level(%)</td>
+</tr>
+<tr class="row-even"><td>specCFRatio</td>
+<td>1.0</td>
+<td>optimization-Risk aversion-AS-CF Risk Aversion Ratio</td>
+</tr>
+<tr class="row-odd"><td>RetDistrTruncTotRet</td>
+<td>0</td>
+<td>return distribution-truncate total return at -100%(复选框)</td>
+</tr>
+<tr class="row-even"><td>constraintPriority</td>
+<td>0</td>
+<td><dl class="first last docutils">
+<dt>Constraints-constraint priority</dt>
+<dd><ul class="first last simple">
+<li>0: default</li>
+<li>1: Tighter</li>
+<li>2: Looser</li>
+</ul>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td>BaseValueType</td>
+<td>0</td>
+<td><dl class="first last docutils">
+<dt>base value</dt>
+<dd><ul class="first last simple">
+<li>0: net value</li>
+<li>1: long_value</li>
+<li>2: long+short value</li>
+<li>3: assigned value</li>
+</ul>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td>AssignedValue</td>
+<td>0</td>
+<td>base value-assigned Value,当basevaluetype=3时需设置</td>
+</tr>
+<tr class="row-odd"><td>longPosition</td>
+<td>1.0</td>
+<td>barra default</td>
+</tr>
+<tr class="row-even"><td>shortPosition</td>
+<td>-1.0</td>
+<td>barra default</td>
+</tr>
+<tr class="row-odd"><td>initCash</td>
+<td>0.0</td>
+<td>Optimization-cash-initial cash</td>
+</tr>
+<tr class="row-even"><td>investAllCash</td>
+<td>0</td>
+<td>Optimization-cash-invest all cash(复选框)</td>
+</tr>
+<tr class="row-odd"><td>cashFlow</td>
+<td>0.0</td>
+<td>Optimization-cash-cash</td>
+</tr>
+<tr class="row-even"><td>optTransType</td>
+<td>1</td>
+<td><dl class="first last docutils">
+<dt>optimization-transactions,</dt>
+<dd><ul class="first last simple">
+<li>1: allow all, default</li>
+<li>2: buy from universer only,</li>
+<li>3: buy none,</li>
+<li>4: sell none,</li>
+<li>5: sell none buy from universer only,</li>
+<li>6: buy none sell from universer only</li>
+</ul>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td>isSinglePf</td>
+<td>1</td>
+<td>barra default</td>
+</tr>
+<tr class="row-even"><td>optTarget</td>
+<td>0.0</td>
+<td>barra default</td>
+</tr>
+<tr class="row-odd"><td>optVaryType</td>
+<td>0</td>
+<td>barra default</td>
+</tr>
+<tr class="row-even"><td>optVaryMin</td>
+<td>0.0</td>
+<td>barra default</td>
+</tr>
+<tr class="row-odd"><td>optVaryMax</td>
+<td>1.0</td>
+<td>barra default</td>
+</tr>
+<tr class="row-even"><td>optMaxPts</td>
+<td>40</td>
+<td>barra default</td>
+</tr>
+<tr class="row-odd"><td>NoChangeLevLong</td>
+<td>0</td>
+<td>barra default</td>
+</tr>
+<tr class="row-even"><td>NoChangeLevShort</td>
+<td>0</td>
+<td>barra default</td>
+</tr>
+<tr class="row-odd"><td>bdisregard_low</td>
+<td>0</td>
+<td>barra default</td>
+</tr>
+<tr class="row-even"><td>bdisregard_high</td>
+<td>0</td>
+<td>barra default</td>
+</tr>
+<tr class="row-odd"><td>Expected_Asset_Return_Source</td>
+<td>1</td>
+<td>barra default</td>
+</tr>
+<tr class="row-even"><td>RiskAversion</td>
+<td>0.00750000</td>
+<td>optimization-Risk aversion-Value 风险厌恶系数</td>
+</tr>
+<tr class="row-odd"><td>RetDistrNumBins</td>
+<td>24</td>
+<td>return Distribution-number of bins, 默认</td>
+</tr>
+<tr class="row-even"><td>RetDistrDensity</td>
+<td>PROB</td>
+<td><dl class="first last docutils">
+<dt>return Distribution-show  function type</dt>
+<dd><ul class="first last simple">
+<li>PROB: probability density</li>
+<li>CUMUL: cumulative density</li>
+</ul>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-odd"><td>UseOptRoundLot</td>
+<td>0</td>
+<td>optimization-roundlotting-Enable Roundlotting</td>
+</tr>
+<tr class="row-even"><td>ReapplyOptRoundLot</td>
+<td>0</td>
+<td>optimization-roundlotting-Apply roundlots after optiomal portfolio is found</td>
+</tr>
+<tr class="row-odd"><td>CloseOutOddOptRoundlot</td>
+<td>0</td>
+<td>optimization-roundlotting-close out fractional positions</td>
+</tr>
+<tr class="row-even"><td>longPositionMax</td>
+<td>1</td>
+<td>long/short-leverage-longposition(%) max 默认为1</td>
+</tr>
+<tr class="row-odd"><td>longPositionMin</td>
+<td>1</td>
+<td>long/short-leverage-longposition(%) min 默认为1</td>
+</tr>
+<tr class="row-even"><td>shortPositionMax</td>
+<td>-1.00</td>
+<td>long/short-leverage-shortposition(%) max 默认为-1(但在系统里手动操作是填100)</td>
+</tr>
+<tr class="row-odd"><td>shortPositionMin</td>
+<td>-1.00</td>
+<td>long/short-leverage-shortposition(%) max 默认为-1</td>
+</tr>
+<tr class="row-even"><td>Maximum_Optimizer_Time_Limit</td>
+<td>5</td>
+<td>optimization-optimization maximum time limit 1 second(s), barra 默认值为1</td>
+</tr>
+<tr class="row-odd"><td>roundtrip_flag</td>
+<td>0</td>
+<td><dl class="first last docutils">
+<dt>transaction costs – analysis mode</dt>
+<dd><ul class="first last simple">
+<li>0: one way</li>
+<li>1: round trip</li>
+</ul>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="row-even"><td>pCostPercent</td>
+<td>0.002</td>
+<td>买入成本</td>
+</tr>
+<tr class="row-odd"><td>sCostPercent</td>
+<td>0.002</td>
+<td>卖出成本</td>
+</tr>
+<tr class="row-even"><td>sCashHoldLowerBound</td>
+<td>-100.00</td>
+<td>holding-cash holding bounds-lower bound%(值)</td>
+</tr>
+<tr class="row-odd"><td>bCashHoldLowerBound</td>
+<td>0</td>
+<td>holding-cash holding bounds-lower bound%(复选框)</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>DataFrame</dt>
+<dd>优化成功后的结果，包括 price quantity sid weight date 列
+如果优化失败，则返回字符串</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="alpha.barra.MessageType">
+<em class="property">class </em><code class="descclassname">alpha.barra.</code><code class="descname">MessageType</code><a class="headerlink" href="#alpha.barra.MessageType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></code></p>
+<p>消息类型</p>
+<dl class="attribute">
+<dt id="alpha.barra.MessageType.ATTRIBUTION">
+<code class="descname">ATTRIBUTION</code><em class="property"> = 0</em><a class="headerlink" href="#alpha.barra.MessageType.ATTRIBUTION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="alpha.barra.MessageType.FACTOR_EXPOSURE">
+<code class="descname">FACTOR_EXPOSURE</code><em class="property"> = 3</em><a class="headerlink" href="#alpha.barra.MessageType.FACTOR_EXPOSURE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="alpha.barra.MessageType.FACTOR_RETURN">
+<code class="descname">FACTOR_RETURN</code><em class="property"> = 2</em><a class="headerlink" href="#alpha.barra.MessageType.FACTOR_RETURN" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="alpha.barra.MessageType.OPTIMIZATION">
+<code class="descname">OPTIMIZATION</code><em class="property"> = 1</em><a class="headerlink" href="#alpha.barra.MessageType.OPTIMIZATION" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-alpha.indicator">
+<span id="alpha-indicator-module"></span><h2>alpha.indicator module<a class="headerlink" href="#module-alpha.indicator" title="Permalink to this headline">¶</a></h2>
+<p>技术指标模块</p>
+<dl class="function">
+<dt id="alpha.indicator.ad">
+<code class="descclassname">alpha.indicator.</code><code class="descname">ad</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>close</em>, <em>volume</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.ad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accumulation Distribution</p>
+<p>money flow volume = ((close-low) - (high-close)) / (high-low) * volume
+ad = previour ad + money flow volume</p>
+<p>如果 high == low，则取今日涨跌幅比例 乘以 成交量</p>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>volume <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>成交量，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>AD 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>AD 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.adtm">
+<code class="descclassname">alpha.indicator.</code><code class="descname">adtm</code><span class="sig-paren">(</span><em>open</em>, <em>high</em>, <em>low</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.adtm" title="Permalink to this definition">¶</a></dt>
+<dd><p>动态买卖气指标</p>
+<ol class="arabic simple">
+<li>dtm = MAX{high-open, open-pre_open} if open &gt; pre_open else 0</li>
+<li>dbm = MAX{open-low, open-pre_open} if open &lt; pre_open else 0</li>
+<li>stm = SUM(dtm, n), sbm = SUM(dbm, n)</li>
+<li>adtm = (stm-sbm) / MAX{stm, sbm}</li>
+</ol>
+<dl class="docutils">
+<dt>open <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>开盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>ADTM 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>ADTM 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.adx">
+<code class="descclassname">alpha.indicator.</code><code class="descname">adx</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.adx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Average Directional Movement Index</p>
+<ol class="arabic simple">
+<li><dl class="first docutils">
+<dt>if (high - pre_high) &gt; (pre_low - low) &amp; (high - pre_high) &gt; 0:</dt>
+<dd>+dm = high - pre_high</dd>
+<dt>else:</dt>
+<dd>+dm = 0</dd>
+<dt>if (pre_low - low) &gt; (high - pre_high) &amp; (pre_low - low) &gt; 0:</dt>
+<dd>-dm = pre_low - low</dd>
+<dt>else:</dt>
+<dd>-dm = 0</dd>
+</dl>
+</li>
+<li>ema +dm = EMA(+dm, 2*n - 1)  # alpha = 1/n
+ema -dm = EMA(-dm, 2*n - 1)  # alpha = 1/n
++di = ema +dm / atr
+-di = ema -dm / atr</li>
+<li>dx = ABS(+di - -di) / (+di + -di) * 100</li>
+<li>adx = EMA(dx, 2*n - 1)  # alpha = 1/n</li>
+</ol>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>ADX 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>ADX 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.adxr">
+<code class="descclassname">alpha.indicator.</code><code class="descname">adxr</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.adxr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Average Directional Movement Index Rating</p>
+<p>adxr = (adx(t) + adx(t-n)) / 2</p>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>ADXR 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>ADXR 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.apbma">
+<code class="descclassname">alpha.indicator.</code><code class="descname">apbma</code><span class="sig-paren">(</span><em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.apbma" title="Permalink to this definition">¶</a></dt>
+<dd><p>Absolute Price Bias Moving Average</p>
+<p>apbma = SMA(ABS(close - SMA(close, n)), n)</p>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>APBMA 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>APBMA 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.ar">
+<code class="descclassname">alpha.indicator.</code><code class="descname">ar</code><span class="sig-paren">(</span><em>open</em>, <em>high</em>, <em>low</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.ar" title="Permalink to this definition">¶</a></dt>
+<dd><p>人气指标</p>
+<p>AR = SUM(high - open, n) / SUM(open - low, n)</p>
+<dl class="docutils">
+<dt>open <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>开盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>AR 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>AR 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.arbr">
+<code class="descclassname">alpha.indicator.</code><code class="descname">arbr</code><span class="sig-paren">(</span><em>open</em>, <em>high</em>, <em>low</em>, <em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.arbr" title="Permalink to this definition">¶</a></dt>
+<dd><p>人气意愿指标</p>
+<p>ARBR = AR - BR</p>
+<dl class="docutils">
+<dt>open <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>开盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>ARBR 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>ARBR 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.aroc">
+<code class="descclassname">alpha.indicator.</code><code class="descname">aroc</code><span class="sig-paren">(</span><em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.aroc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Average Rate of Change</p>
+<ol class="arabic simple">
+<li>roc = close(t) / close(t-n)</li>
+<li>aroc = EMA(roc, 2n-1)  # alpha = 1/n</li>
+</ol>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>AROC 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>AROC 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.aroon">
+<code class="descclassname">alpha.indicator.</code><code class="descname">aroon</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.aroon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aroon</p>
+<ol class="arabic simple">
+<li>aroon up = (n - days since n-day high) / n * 100</li>
+<li>aroon down = (n - days since n-day down) / n * 100</li>
+</ol>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Aroon 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>tuple</dt>
+<dd>Aroon Up 和 Aroon Down 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.aroon_osc">
+<code class="descclassname">alpha.indicator.</code><code class="descname">aroon_osc</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.aroon_osc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aroon Oscillator</p>
+<ol class="arabic simple">
+<li>aroon up = (n - days since n-day high) / n * 100</li>
+<li>aroon down = (n - days since n-day down) / n * 100</li>
+<li>aroon osc = aroon up - aroon down</li>
+</ol>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Aroon 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>Aroon 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.asi">
+<code class="descclassname">alpha.indicator.</code><code class="descname">asi</code><span class="sig-paren">(</span><em>open</em>, <em>high</em>, <em>low</em>, <em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.asi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accumulation Swing Index</p>
+<p>asi = SUM(SI, n)</p>
+<dl class="docutils">
+<dt>open <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>开盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>ASI 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>ASI 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.bbi">
+<code class="descclassname">alpha.indicator.</code><code class="descname">bbi</code><span class="sig-paren">(</span><em>close</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.bbi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bull and Bear Index</p>
+<p>bbi = (SMA3 + SMA6 + SMA12 + SMA24) / 4</p>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>BBI 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.bbic">
+<code class="descclassname">alpha.indicator.</code><code class="descname">bbic</code><span class="sig-paren">(</span><em>close</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.bbic" title="Permalink to this definition">¶</a></dt>
+<dd><p>BBI to close</p>
+<p>bbic = bbi / close</p>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>BBIC 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.bias">
+<code class="descclassname">alpha.indicator.</code><code class="descname">bias</code><span class="sig-paren">(</span><em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.bias" title="Permalink to this definition">¶</a></dt>
+<dd><p>乖离率</p>
+<p>bias = (close/SMA(close, n) - 1) * 100</p>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>BIAS 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>BIAS 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.boll">
+<code class="descclassname">alpha.indicator.</code><code class="descname">boll</code><span class="sig-paren">(</span><em>close</em>, <em>n</em>, <em>k=2</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.boll" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bollinger Bands</p>
+<ol class="arabic simple">
+<li>mid = SMA(close, n)</li>
+<li>std = STD(close, n)</li>
+<li>upper = mid + k*std</li>
+<li>lower = mid - k*std</li>
+</ol>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Bollinger 指标的周期</dd>
+<dt>k <span class="classifier-delimiter">:</span> <span class="classifier">int, default 2</span></dt>
+<dd>标准差的系数，标准设置为 2</dd>
+</dl>
+<dl class="docutils">
+<dt>tuple of pd.DataFrame or pd.Series</dt>
+<dd>Bollinger Upper, Mid, Lower Bands，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.br">
+<code class="descclassname">alpha.indicator.</code><code class="descname">br</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.br" title="Permalink to this definition">¶</a></dt>
+<dd><p>意愿指标</p>
+<p>BR = SUM(MAX{high-pre_close, 0}, n) / SUM(MAX{pre_close-low, 0}, n)</p>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>BR 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>BR 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.cci">
+<code class="descclassname">alpha.indicator.</code><code class="descname">cci</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.cci" title="Permalink to this definition">¶</a></dt>
+<dd><p>Commodity Channel Index</p>
+<ol class="arabic simple">
+<li>typ = (high+low+close) / 3</li>
+<li>typsma = SMA(typ, n)</li>
+<li>dev = SMA(ABS(typ - typsma), n)</li>
+<li>cci = (typ-typsma) / 0.015 / dev</li>
+</ol>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>CCI 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>CCI 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.chaikin_oscillator">
+<code class="descclassname">alpha.indicator.</code><code class="descname">chaikin_oscillator</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>close</em>, <em>volume</em>, <em>n1</em>, <em>n2</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.chaikin_oscillator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chaikin Oscillator</p>
+<p>chaikin oscillator = ema(daily_ad, n1) - ema(daily_ad, n2)</p>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n1 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>快周期</dd>
+<dt>n2 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>慢周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>Chaikin Oscillator 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.chaikin_volatility">
+<code class="descclassname">alpha.indicator.</code><code class="descname">chaikin_volatility</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.chaikin_volatility" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chaikin Volatility</p>
+<ol class="arabic simple">
+<li>hlema = ema(high - low, 10)</li>
+<li>chaiking volatility = (hlema(t) - hlema(t-n)) / hlema(t-n) * 100</li>
+</ol>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Chaikin Volatility 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>Chaikin Volatility 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.cmo">
+<code class="descclassname">alpha.indicator.</code><code class="descname">cmo</code><span class="sig-paren">(</span><em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.cmo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chande Momentum Oscillator</p>
+<ol class="arabic simple">
+<li>if close &gt; pre_close, up = close - pre_close, down = 0
+if close &lt; pre_close, up = 0, down = pre_close - close
+if close = pre_close, up = down = 0</li>
+<li>u = SUM(up, n)
+d = SUM(down, n)</li>
+<li>cmo = (u-d) / (u+d) * 100</li>
+</ol>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>CMO 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>CMO 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.coppock_curve">
+<code class="descclassname">alpha.indicator.</code><code class="descname">coppock_curve</code><span class="sig-paren">(</span><em>close</em>, <em>n1=14</em>, <em>n2=11</em>, <em>n3=10</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.coppock_curve" title="Permalink to this definition">¶</a></dt>
+<dd><p>估波曲线</p>
+<p>coppock_curve = WMA(roc_14 + roc_11, 10)</p>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n1 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>ROC 指标的周期</dd>
+<dt>n2 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>ROC 指标的周期</dd>
+<dt>n3 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>加权平均的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>Coppock Curve 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.cr">
+<code class="descclassname">alpha.indicator.</code><code class="descname">cr</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.cr" title="Permalink to this definition">¶</a></dt>
+<dd><ol class="arabic simple">
+<li>typ = (high+low+close) / 3</li>
+<li>cr = SUM(MAX{high-pre_typ, 0}, n) / SUM(MAX{pre_typ-low, 0}, n) * 100</li>
+</ol>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>CR 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>CR 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.dbcd">
+<code class="descclassname">alpha.indicator.</code><code class="descname">dbcd</code><span class="sig-paren">(</span><em>close</em>, <em>n1</em>, <em>n2</em>, <em>n3</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.dbcd" title="Permalink to this definition">¶</a></dt>
+<dd><p>异同离差乖离率</p>
+<ol class="arabic simple">
+<li>bias = (close/SMA(close, n1) - 1) * 100</li>
+<li>dif = bias(t) - bias(t-n2)</li>
+<li>dbcd = EMA(dif, n3)</li>
+</ol>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n1 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>计算 BIAS 的周期</dd>
+<dt>n2 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>BIAS 的间隔长度</dd>
+<dt>n3 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>指数平滑的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>DBCD 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.ddi">
+<code class="descclassname">alpha.indicator.</code><code class="descname">ddi</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.ddi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Directional Divergence Index</p>
+<ol class="arabic simple">
+<li><dl class="first docutils">
+<dt>if (high+low) &lt;= (pre_high+pre_low):</dt>
+<dd>dmz = 0</dd>
+<dt>else:</dt>
+<dd>dmz = MAX{ABS(high-pre_high), ABS(low-pre_low)}</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>if (high+low) &gt;= (pre_high+pre_low):</dt>
+<dd>dmf = 0</dd>
+<dt>else:</dt>
+<dd>dmf = MAX{ABS(high-pre_high), ABS(low-pre_low)}</dd>
+</dl>
+</li>
+<li>diz = SUM(dmz, n) / (SUM(dmz, n) + SUM(dmf, n))
+dif = SUM(dmf, n) / (SUM(dmz, n) + SUM(dmf, n))</li>
+<li>ddi = diz - dif</li>
+</ol>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>DDI 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>DDI 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.donchian_channel">
+<code class="descclassname">alpha.indicator.</code><code class="descname">donchian_channel</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.donchian_channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>upper = MAX(pre_high, n)
+lower = MIN(pre_low, n)</p>
+<p>注意，不能包含今天，否则永远无法突破通道。</p>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>通道的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>tuple of pd.DataFrame or pd.Series</dt>
+<dd>Upper, Mid, Lower Bands，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.elder">
+<code class="descclassname">alpha.indicator.</code><code class="descname">elder</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.elder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Elder Ray Index</p>
+<ol class="arabic simple">
+<li>bull_power = high - EMA(close, n)</li>
+<li>bear_power = low - EMA(close, n)</li>
+<li>elder = (bull_power - bear_power) / close</li>
+</ol>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Elder 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>Elder 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.element_max">
+<code class="descclassname">alpha.indicator.</code><code class="descname">element_max</code><span class="sig-paren">(</span><em>comparable</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.element_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Element-wise Max</p>
+<dl class="docutils">
+<dt>comparable <span class="classifier-delimiter">:</span> <span class="classifier">list or iterable</span></dt>
+<dd>每一个元素是形状相同的 pd.Series 或 pd.DataFrame</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.Series or pd.DataFrame</dt>
+<dd>逐元素取最大值，和参数形状一致，</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.element_min">
+<code class="descclassname">alpha.indicator.</code><code class="descname">element_min</code><span class="sig-paren">(</span><em>comparable</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.element_min" title="Permalink to this definition">¶</a></dt>
+<dd><p>Element-wise Min</p>
+<dl class="docutils">
+<dt>comparable <span class="classifier-delimiter">:</span> <span class="classifier">list or iterable</span></dt>
+<dd>每一个元素是形状相同的 pd.Series 或 pd.DataFrame</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.Series or pd.DataFrame</dt>
+<dd>逐元素取最小值，和参数形状一致，</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.ema">
+<code class="descclassname">alpha.indicator.</code><code class="descname">ema</code><span class="sig-paren">(</span><em>s</em>, <em>n</em>, <em>tolerance=0.75</em>, <em>threshold=5</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.ema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exponential Moving Average</p>
+<p>封装了 pd.ewm 方法，增加了缺失值数量的约束</p>
+<dl class="docutils">
+<dt>s <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>原始序列，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>指数移动平滑的周期，对应 pd.ewm 中的 span</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>指数移动平均线，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.emv">
+<code class="descclassname">alpha.indicator.</code><code class="descname">emv</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>volume</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.emv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ease of Movement</p>
+<ol class="arabic simple">
+<li>mid = (high + low) / 2</li>
+<li>mid move = mid - pre_mid</li>
+<li>box ratio = volume / (high - low)</li>
+<li>emv = ema(mid move / box raio, n)</li>
+</ol>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>volume <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>成交量，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>EMV 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>EMV 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.kdj">
+<code class="descclassname">alpha.indicator.</code><code class="descname">kdj</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>close</em>, <em>n1</em>, <em>n2</em>, <em>n3</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.kdj" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stochastic Oscillator</p>
+<ol class="arabic simple">
+<li>rsv = (close-MIN(low, n1)) / (MAX(high, n1)-MIN(low, n1)) * 100</li>
+<li>k = SMA(rsv, n2)</li>
+<li>d = SMA(k, n3)</li>
+<li>j = 3*k - 2*d</li>
+</ol>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n1 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>计算 rsv 的周期</dd>
+<dt>n2 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>计算 k 的周期</dd>
+<dt>n3 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>计算 d 的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>tuple</dt>
+<dd>K, D, J 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.keltner_channel">
+<code class="descclassname">alpha.indicator.</code><code class="descname">keltner_channel</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>close</em>, <em>n1</em>, <em>n2</em>, <em>k</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.keltner_channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>upper = EMA(close, n1) + k * atr(n2)
+lower = EMA(close, n1) - k * atr(n2)</p>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n1 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>均线的周期</dd>
+<dt>n2 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>ATR 的周期</dd>
+<dt>k <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>通道的宽度</dd>
+</dl>
+<dl class="docutils">
+<dt>tuple of pd.DataFrame or pd.Series</dt>
+<dd>Upper, Mid, Lower Bands，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.klinger_oscillator">
+<code class="descclassname">alpha.indicator.</code><code class="descname">klinger_oscillator</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>close</em>, <em>volume</em>, <em>n1</em>, <em>n2</em>, <em>n3</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.klinger_oscillator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Klinger Oscillator</p>
+<ol class="arabic simple">
+<li>typ = (high + low + close) / 3</li>
+<li><dl class="first docutils">
+<dt>if typ &gt; pre_typ:</dt>
+<dd>v = volume</dd>
+<dt>if typ &lt; pre_typ:</dt>
+<dd>v = -volume</dd>
+<dt>if typ = pre_typ:</dt>
+<dd>v = np.nan</dd>
+</dl>
+</li>
+<li>dif = ema(typ, n1) - ema(typ, n2)</li>
+<li>klinger oscillator = ema(dif, n3)</li>
+</ol>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>volume <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>成交量，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n1 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>短周期</dd>
+<dt>n2 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>长周期</dd>
+<dt>n3 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>差值的平滑周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>Klinger Oscillator 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.macd">
+<code class="descclassname">alpha.indicator.</code><code class="descname">macd</code><span class="sig-paren">(</span><em>close</em>, <em>n1</em>, <em>n2</em>, <em>n3</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.macd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moving Average Convergence Divergence</p>
+<ol class="arabic simple">
+<li>dif = EMA(close, n1) - EMA(close, n2)</li>
+<li>dea = EMA(dif, n3)</li>
+<li>macd = dif - dea</li>
+</ol>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n1 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>快速均线的周期</dd>
+<dt>n2 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>慢速均线的周期</dd>
+<dt>n3 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>快速均线和慢速均线之差的平滑周期</dd>
+</dl>
+<dl class="docutils">
+<dt>tuple</dt>
+<dd>dif, dea, dif - dea，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.mass_index">
+<code class="descclassname">alpha.indicator.</code><code class="descname">mass_index</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>n1=9</em>, <em>n2=25</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.mass_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mass Index</p>
+<ol class="arabic simple">
+<li>ema_hl = EMA(high - low, 9)</li>
+<li>ema_ratio = ema_hl / EMA(ema_hl, 9)</li>
+<li>mass_index = SUM(ema_raio, 25)</li>
+</ol>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n1 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>指数平滑的周期</dd>
+<dt>n2 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>求和的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>Mass Index 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.mcount">
+<code class="descclassname">alpha.indicator.</code><code class="descname">mcount</code><span class="sig-paren">(</span><em>s</em>, <em>n</em>, <em>tolerance=0.75</em>, <em>threshold=5</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.mcount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moving Count</p>
+<p>封装了 pandas 的 rolling.count 方法，增加了缺失值数量的约束</p>
+<dl class="docutils">
+<dt>s <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>原始序列，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>移动窗口的长度</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>移动计数，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.mf">
+<code class="descclassname">alpha.indicator.</code><code class="descname">mf</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>close</em>, <em>volume</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.mf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Money Flow</p>
+<ol class="arabic simple">
+<li>typ = (high + low + close) / 3</li>
+<li>money flow = SUM(typ * volume, n)</li>
+</ol>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>volume <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>成交量，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>MF 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>Money Flow 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.mfi">
+<code class="descclassname">alpha.indicator.</code><code class="descname">mfi</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>close</em>, <em>volume</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.mfi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Money Flow Index</p>
+<ol class="arabic simple">
+<li>typ = (high+low+close) / 3</li>
+<li>mf = typ * volume</li>
+<li>u = SUM(I[typ &gt; pre_typ]*mf, n)
+d = SUM(I[typ &lt; pre_typ]*mf, n)</li>
+<li>mr = u / d</li>
+<li>mfi = 100 - 100/(1+mr) = u / (u+d) * 100</li>
+</ol>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>volume <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>成交量，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>MFI 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>MFI 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.mkurt">
+<code class="descclassname">alpha.indicator.</code><code class="descname">mkurt</code><span class="sig-paren">(</span><em>s</em>, <em>n</em>, <em>tolerance=0.75</em>, <em>threshold=5</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.mkurt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moving Kurtosis</p>
+<p>封装了 pandas 的 rolling.kurtosis 方法，增加了缺失值数量的约束</p>
+<dl class="docutils">
+<dt>s <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>原始序列，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>移动窗口的长度</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>移动峰度，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.mmax">
+<code class="descclassname">alpha.indicator.</code><code class="descname">mmax</code><span class="sig-paren">(</span><em>s</em>, <em>n</em>, <em>tolerance=0.75</em>, <em>threshold=5</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.mmax" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moving Max</p>
+<p>封装了 pandas 的 rolling.max 方法，增加了缺失值数量的约束</p>
+<dl class="docutils">
+<dt>s <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>原始序列，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>移动窗口的长度</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>移动求最大值，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.mmedian">
+<code class="descclassname">alpha.indicator.</code><code class="descname">mmedian</code><span class="sig-paren">(</span><em>s</em>, <em>n</em>, <em>tolerance=0.75</em>, <em>threshold=5</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.mmedian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moving Median</p>
+<p>封装了 pandas 的 rolling.median 方法，增加了缺失值数量的约束</p>
+<dl class="docutils">
+<dt>s <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>原始序列，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>移动窗口的长度</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>移动中位数，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.mmin">
+<code class="descclassname">alpha.indicator.</code><code class="descname">mmin</code><span class="sig-paren">(</span><em>s</em>, <em>n</em>, <em>tolerance=0.75</em>, <em>threshold=5</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.mmin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moving Min</p>
+<p>封装了 pandas 的 rolling.min 方法，增加了缺失值数量的约束</p>
+<dl class="docutils">
+<dt>s <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>原始序列，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>移动窗口的长度</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>移动求最小值，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.mom">
+<code class="descclassname">alpha.indicator.</code><code class="descname">mom</code><span class="sig-paren">(</span><em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.mom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Momentum</p>
+<p>momentum = close(t) - close(t-n)</p>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Momentum 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>Momentum 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.mskew">
+<code class="descclassname">alpha.indicator.</code><code class="descname">mskew</code><span class="sig-paren">(</span><em>s</em>, <em>n</em>, <em>tolerance=0.75</em>, <em>threshold=5</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.mskew" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moving Skewness</p>
+<p>封装了 pandas 的 rolling.skew 方法，增加了缺失值数量的约束</p>
+<dl class="docutils">
+<dt>s <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>原始序列，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>移动窗口的长度</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>移动偏度，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.obv">
+<code class="descclassname">alpha.indicator.</code><code class="descname">obv</code><span class="sig-paren">(</span><em>close</em>, <em>volume</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.obv" title="Permalink to this definition">¶</a></dt>
+<dd><p>On Balance Volume</p>
+<dl class="docutils">
+<dt>if close &gt; pre_close:</dt>
+<dd>obv += volume</dd>
+<dt>else:</dt>
+<dd>ovb -= volume</dd>
+</dl>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>OBV 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.price_level">
+<code class="descclassname">alpha.indicator.</code><code class="descname">price_level</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.price_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>当前价格位于历史区间的位置</p>
+<p>pl = (close-MIN(low, n)) / (MAX(high, n)-MIN(low, n))</p>
+<p>如果最高价和最低价一样，取50</p>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>price_level 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>price_level 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.psy">
+<code class="descclassname">alpha.indicator.</code><code class="descname">psy</code><span class="sig-paren">(</span><em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.psy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Psychological Line Index</p>
+<p>psy = SMA(I(close &gt; pre_close), n)</p>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>PSY 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>PSY 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.pvt">
+<code class="descclassname">alpha.indicator.</code><code class="descname">pvt</code><span class="sig-paren">(</span><em>close</em>, <em>volume</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.pvt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Price Volume Trend</p>
+<p>pvt = SUM((close - pre_close) / pre_close * volume, n)</p>
+<p>结果除以了 1e6</p>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>volume <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>成交量，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>PVT 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>PVT 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.roc">
+<code class="descclassname">alpha.indicator.</code><code class="descname">roc</code><span class="sig-paren">(</span><em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.roc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rate of Change (Price)</p>
+<p>roc = (close(t) / close(t-n) - 1) * 100</p>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>ROC 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>ROC 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.rocr">
+<code class="descclassname">alpha.indicator.</code><code class="descname">rocr</code><span class="sig-paren">(</span><em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.rocr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rate of Change Ratio</p>
+<p>rocr = close(t) / close(t-n)</p>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>ROCR 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>ROCR 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.rsi">
+<code class="descclassname">alpha.indicator.</code><code class="descname">rsi</code><span class="sig-paren">(</span><em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.rsi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relative Strength Index</p>
+<ol class="arabic simple">
+<li>if close &gt; pre_close, up = close - pre_close, down = 0
+if close &lt; pre_close, up = 0, down = pre_close - close
+if close = pre_close, up = down = 0</li>
+<li>u = EMA(up, 2n-1)  # alpha = 1/n
+d = EMA(down, 2n-1)  # alpha = 1/n</li>
+<li>rsi = u / (u+d) * 100</li>
+</ol>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>RSI 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>RSI 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.rvi">
+<code class="descclassname">alpha.indicator.</code><code class="descname">rvi</code><span class="sig-paren">(</span><em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.rvi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relative Volatility Index</p>
+<ol class="arabic simple">
+<li>std = STD(close, 10)</li>
+<li>if close &gt; pre_close, u_std = std, d_std = 0
+if close &lt; pre_close, u_std = 0, d_std = std
+if close = pre_close, u_std = d_dst = 0</li>
+<li>u = EMA(u_std, 2n-1)  # alpha = 1/n
+d = EMA(d_std, 2n-1)  # alpha = 1/n</li>
+<li>rvi = u / (u+d) * 100</li>
+</ol>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>RVI 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>RVI 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.si">
+<code class="descclassname">alpha.indicator.</code><code class="descname">si</code><span class="sig-paren">(</span><em>open</em>, <em>high</em>, <em>low</em>, <em>close</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.si" title="Permalink to this definition">¶</a></dt>
+<dd><p>Swing Index</p>
+<ol class="arabic">
+<li><p class="first">A = ABS(close - pre_close)
+B = ABS(low - pre_close)
+C = ABS(high - pre_low)
+D = ABS(pre_close - pre_open)</p>
+</li>
+<li><p class="first">E = close - pre_close
+F = close - open
+G = pre_close - pre_open</p>
+</li>
+<li><p class="first">X = E + F/2 + G</p>
+</li>
+<li><p class="first">K = MAX{A, B}</p>
+</li>
+<li><p class="first">switch MAX{A, B, C}:
+case A:</p>
+<blockquote>
+<div><p>R = A + B/2 + D/4</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>case B:</dt>
+<dd><p class="first last">R = A/2 + B + D/4</p>
+</dd>
+<dt>case C:</dt>
+<dd><p class="first last">R = C + D/4</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">SI = 16 * X / R * K</p>
+</li>
+</ol>
+<dl class="docutils">
+<dt>open <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>开盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>SI 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.sma">
+<code class="descclassname">alpha.indicator.</code><code class="descname">sma</code><span class="sig-paren">(</span><em>s</em>, <em>n</em>, <em>tolerance=0.75</em>, <em>threshold=5</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.sma" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple Moving Average</p>
+<p>封装了 pandas 的 rolling.mean 方法，增加了缺失值数量的约束</p>
+<dl class="docutils">
+<dt>s <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>原始序列，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>移动窗口的长度</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>简单移动平均线，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.smawvad">
+<code class="descclassname">alpha.indicator.</code><code class="descname">smawvad</code><span class="sig-paren">(</span><em>open</em>, <em>high</em>, <em>low</em>, <em>close</em>, <em>volume</em>, <em>n1</em>, <em>n2</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.smawvad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple Moving Average of wvad</p>
+<p>smawvad = SMA(wvad(n1), n2)</p>
+<dl class="docutils">
+<dt>open <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>开盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>volume <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>成交量，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n1 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>WVAD 指标的周期</dd>
+<dt>n2 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>简单移动平滑的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>SMAWVAD 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.smcorr">
+<code class="descclassname">alpha.indicator.</code><code class="descname">smcorr</code><span class="sig-paren">(</span><em>s1</em>, <em>s2</em>, <em>n</em>, <em>tolerance=0.75</em>, <em>threshold=5</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.smcorr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple Moving Correlation</p>
+<p>封装了 pandas 的 rolling.corr 方法，增加了缺失值数量的约束</p>
+<dl class="docutils">
+<dt>s1 <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>原始序列，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>s2 <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>原始序列，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>移动窗口的长度</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>简单移动相关系数，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.sms">
+<code class="descclassname">alpha.indicator.</code><code class="descname">sms</code><span class="sig-paren">(</span><em>s</em>, <em>n</em>, <em>tolerance=0.75</em>, <em>threshold=5</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.sms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple Moving Sum</p>
+<p>封装了 pandas 的 rolling.sum 方法，增加了缺失值数量的约束</p>
+<dl class="docutils">
+<dt>s <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>原始序列，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>移动窗口的长度</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>简单移动求和，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.smstd">
+<code class="descclassname">alpha.indicator.</code><code class="descname">smstd</code><span class="sig-paren">(</span><em>s</em>, <em>n</em>, <em>tolerance=0.75</em>, <em>threshold=5</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.smstd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple Moving Standard Deviation</p>
+<p>封装了 pandas 的 rolling.std 方法，增加了缺失值数量的约束</p>
+<dl class="docutils">
+<dt>s <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>原始序列，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>移动窗口的长度</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>简单移动标准差，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.srmi">
+<code class="descclassname">alpha.indicator.</code><code class="descname">srmi</code><span class="sig-paren">(</span><em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.srmi" title="Permalink to this definition">¶</a></dt>
+<dd><p>修正动量指标</p>
+<p>mmi = (close(t) - close(t-n)) / MAX{close(t), close(t-n)}</p>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>SRMI 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>SRMI 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.tema">
+<code class="descclassname">alpha.indicator.</code><code class="descname">tema</code><span class="sig-paren">(</span><em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.tema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Triple Exponential Moving Average</p>
+<ol class="arabic simple">
+<li>ema1 = EMA(close, n)</li>
+<li>ema2 = EMA(ema1, n)</li>
+<li>ema3 = EMA(ema2, n)</li>
+<li>tema = 3*ema1 - 3*ema2 + ema3</li>
+</ol>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>TEMA 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>TEMA 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.trix">
+<code class="descclassname">alpha.indicator.</code><code class="descname">trix</code><span class="sig-paren">(</span><em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.trix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rate-Of-Change (ROC) of a Triple Smooth EMA</p>
+<ol class="arabic simple">
+<li>ema3 = ema(ema(ema(close, n), n), n)
+trix = ema3 / pre_ema3 - 1</li>
+</ol>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>TRIX 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>TRIX 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.ulcer">
+<code class="descclassname">alpha.indicator.</code><code class="descname">ulcer</code><span class="sig-paren">(</span><em>close</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.ulcer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ulcer Index</p>
+<ol class="arabic simple">
+<li>p = (close - MAX(close, n)) / MAX(close, n) * 100</li>
+<li>ulcer = SQRT(SMA(p^2, n))</li>
+</ol>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>Ulcer 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.uo">
+<code class="descclassname">alpha.indicator.</code><code class="descname">uo</code><span class="sig-paren">(</span><em>high</em>, <em>low</em>, <em>close</em>, <em>n1</em>, <em>n2</em>, <em>n3</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.uo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ultimate Oscillator</p>
+<ol class="arabic simple">
+<li>th = MAX{high, pre_close}
+tl = MIN{low, pre_close}
+tr = th - tl</li>
+<li>xr = close - tl</li>
+<li>xr1 = SUM(xr, n1) / SUM(tr, n1)
+xr2 = SUM(xr, n2) / SUM(tr, n2)
+xr3 = SUM(xr, n3) / SUM(tr, n3)</li>
+<li>uo = 100 * (xr1*n2*n3 + xr2*n1*n3 + xr3*n1*n2) / (n2*n3 + n1*n3 + n1*n2)</li>
+</ol>
+<dl class="docutils">
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n1 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>UO 指标的周期</dd>
+<dt>n2 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>UO 指标的周期</dd>
+<dt>n3 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>UO 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>UO 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.vmacd">
+<code class="descclassname">alpha.indicator.</code><code class="descname">vmacd</code><span class="sig-paren">(</span><em>volume</em>, <em>n1</em>, <em>n2</em>, <em>n3</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.vmacd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Volume Moving Average Convergence Divergence</p>
+<ol class="arabic simple">
+<li>dif = EMA(volume, n1) - EMA(volume, n2)</li>
+<li>dea = EMA(dif, n3)</li>
+<li>macd = dif - dea</li>
+</ol>
+<dl class="docutils">
+<dt>volume <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>成交量，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n1 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>快速均线的周期</dd>
+<dt>n2 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>慢速均线的周期</dd>
+<dt>n3 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>快速均线和慢速均线之差的平滑周期</dd>
+</dl>
+<dl class="docutils">
+<dt>tuple</dt>
+<dd>dif, dea, dif - dea，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.vosc">
+<code class="descclassname">alpha.indicator.</code><code class="descname">vosc</code><span class="sig-paren">(</span><em>volume</em>, <em>n1</em>, <em>n2</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.vosc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Volume Oscillator</p>
+<p>pvo = (EMA(volume, n1)-EMA(volume, n2)) / EMA(volume, n1)</p>
+<dl class="docutils">
+<dt>volume <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>成交量，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n1 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>短周期</dd>
+<dt>n2 <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>长周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>VOSC 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.vr">
+<code class="descclassname">alpha.indicator.</code><code class="descname">vr</code><span class="sig-paren">(</span><em>close</em>, <em>volume</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.vr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Volume Ratio</p>
+<ol class="arabic simple">
+<li>av = volume if close &gt; pre_close else 0
+bv = volume if close &lt; pre_close else 0
+cv = volume if close = pre_close else 0</li>
+<li>vr = SUM(av + cv/2, n) / SUM(bv + cv/2, n)</li>
+</ol>
+<dl class="docutils">
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>volume <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>成交量，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>VR 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>VR 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.vroc">
+<code class="descclassname">alpha.indicator.</code><code class="descname">vroc</code><span class="sig-paren">(</span><em>volume</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.vroc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Volume Rate of Change</p>
+<p>vroc = (volume(t)/volume(t-n) - 1) * 100</p>
+<dl class="docutils">
+<dt>volume <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>成交量，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>VROC 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>VROC 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.wma">
+<code class="descclassname">alpha.indicator.</code><code class="descname">wma</code><span class="sig-paren">(</span><em>s</em>, <em>n</em>, <em>tolerance=0.75</em>, <em>threshold=5</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.wma" title="Permalink to this definition">¶</a></dt>
+<dd><p>Weighted Moving Average</p>
+<p>wma = (n*s(t) + … 1*s(t-n+1)) / (n + (n-1) + … + 1)</p>
+<p>如果存在空值，则会返回 nan</p>
+<dl class="docutils">
+<dt>s <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>原始序列，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>指数移动平滑的周期，对应 pd.ewm 中的 span</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>指数移动平均线，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.indicator.wvad">
+<code class="descclassname">alpha.indicator.</code><code class="descname">wvad</code><span class="sig-paren">(</span><em>open</em>, <em>high</em>, <em>low</em>, <em>close</em>, <em>volume</em>, <em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.indicator.wvad" title="Permalink to this definition">¶</a></dt>
+<dd><p>William’s Variable Accumulation Distribution</p>
+<p>wvad = SUM((close-open) / (high-low) * volume, n)</p>
+<dl class="docutils">
+<dt>open <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>开盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>high <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最高价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>low <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>最低价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>close <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>收盘价，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>volume <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame or pd.Series</span></dt>
+<dd>成交量，index 为升序排列的日期，如果是 pd.DataFrame, columns 是股票，
+如果是 pd.Series，表示单只股票</dd>
+<dt>n <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>WVAD 指标的周期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame or pd.Series</dt>
+<dd>WVAD 指标，和参数形状一致</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-alpha.preprocess">
+<span id="alpha-preprocess-module"></span><h2>alpha.preprocess module<a class="headerlink" href="#module-alpha.preprocess" title="Permalink to this headline">¶</a></h2>
+<p>数据预处理模块</p>
+<dl class="function">
+<dt id="alpha.preprocess.attribution_factors">
+<code class="descclassname">alpha.preprocess.</code><code class="descname">attribution_factors</code><span class="sig-paren">(</span><em>aligned_data</em>, <em>traget_factor</em>, <em>extra_factor=None</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.preprocess.attribution_factors" title="Permalink to this definition">¶</a></dt>
+<dd><p>对因子收益进行归因,默认为日度收益率</p>
+<dl class="docutils">
+<dt>aligned_data <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame</span></dt>
+<dd>包含股票收益率和因子值的对其数据，index 为 [date, sid]</dd>
+<dt>target_factor <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>需要将业绩归因到的因子名称</dd>
+<dt>extra_factor <span class="classifier-delimiter">:</span> <span class="classifier">str or list of str</span></dt>
+<dd>额外的因子，譬如是 lcap，剔除市值因子的影响</dd>
+</dl>
+<p>params 的系数代表的收益率跟 aligned_data 的对齐 period 有关
+使用收益率累乘时需要将其折算到日。</p>
+<dl class="docutils">
+<dt>resid <span class="classifier-delimiter">:</span> <span class="classifier">Series</span></dt>
+<dd>归因后的残差收益率，index 为 [date, sid]</dd>
+<dt>params <span class="classifier-delimiter">:</span> <span class="classifier">DataFrame</span></dt>
+<dd>回归的 系数，index 为 date，列分别为 截距项 和 因子收益</dd>
+<dt>t <span class="classifier-delimiter">:</span> <span class="classifier">DataFrame</span></dt>
+<dd>回归的 t 值，index 为 date，列分别为 截距项 和 因子收益</dd>
+<dt>r2 <span class="classifier-delimiter">:</span> <span class="classifier">Series</span></dt>
+<dd>回归的 R-Square，index 为 date</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.preprocess.clean_factors">
+<code class="descclassname">alpha.preprocess.</code><code class="descname">clean_factors</code><span class="sig-paren">(</span><em>factors: pandas.core.frame.DataFrame</em>, <em>n_diverge=9</em>, <em>wp=0.01</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.preprocess.clean_factors" title="Permalink to this definition">¶</a></dt>
+<dd><p>因子清洗，支持多个因子同时清洗</p>
+<p>因子必须 <strong>按照日期排序</strong></p>
+<dl class="docutils">
+<dt>factors <span class="classifier-delimiter">:</span> <span class="classifier">pd.Series or pd.DataFrame</span></dt>
+<dd>一个(多个)因子数据 Series (DataFrame)，index 为 [date, sid]，
+每一列为一个因子</dd>
+<dt>n_diverge <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>偏离中心多远的值被定义为极值，默认为 9 倍 标准差</dd>
+<dt>wp <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>截尾比例，默认为 1%</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.Series or pd.DataFrame</dt>
+<dd>清洗之后的(多个)因子截面数据，形状同 df</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.preprocess.demean">
+<code class="descclassname">alpha.preprocess.</code><code class="descname">demean</code><span class="sig-paren">(</span><em>data</em>, <em>groups</em>, <em>inplace=False</em>, <em>need_sort=True</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.preprocess.demean" title="Permalink to this definition">¶</a></dt>
+<dd><p>按照 groups 对 data 进行去中心化操作</p>
+<dl class="docutils">
+<dt>data <span class="classifier-delimiter">:</span> <span class="classifier">Series</span></dt>
+<dd>需要去中心化的 Series</dd>
+<dt>groups <span class="classifier-delimiter">:</span> <span class="classifier">list of str</span></dt>
+<dd>去中心化依据。groups 应该是 data.index.names 中的成员</dd>
+<dt>inplace <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>是否在源数据上进行</dd>
+<dt>need_sort <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>是否需要按照 groups 排序。如果 data 已经排序过，可以设置为 False 提高性能</dd>
+</dl>
+<dl class="docutils">
+<dt>Series</dt>
+<dd>去中心化之后的值，shape 形同 data
+当inplace=True 时，无返回</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.preprocess.filter_prices">
+<code class="descclassname">alpha.preprocess.</code><code class="descname">filter_prices</code><span class="sig-paren">(</span><em>prices: pandas.core.frame.DataFrame</em>, <em>inplace=False</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.preprocess.filter_prices" title="Permalink to this definition">¶</a></dt>
+<dd><p>过滤价格数据中停牌，st及新股中不可用数据</p>
+<dl class="docutils">
+<dt>prices <span class="classifier-delimiter">:</span> <span class="classifier">pd.Series</span></dt>
+<dd><p class="first">index 为 [date, sid] 的 Series，形如下表</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="37%" />
+<col width="37%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">date</th>
+<th class="head">sid</th>
+<th class="head">price</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>2016-01-04</td>
+<td>000001.SZ</td>
+<td>974.31</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td>000002.SZ</td>
+<td>3113.54</td>
+</tr>
+<tr class="row-even"><td></td>
+<td>000004.SZ</td>
+<td>167.88</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td>000005.SZ</td>
+<td>83.78</td>
+</tr>
+<tr class="row-even"><td></td>
+<td>000006.SZ</td>
+<td>332.18</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>inplace <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd>是否在原数据上修改，默认为 否</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.Series</dt>
+<dd>index 为 [date, sid] 的 Series，某些价格为设置为 nan</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.preprocess.generate_filter">
+<code class="descclassname">alpha.preprocess.</code><code class="descname">generate_filter</code><span class="sig-paren">(</span><em>info</em>, <em>dts</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.preprocess.generate_filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>返回单只股票在指定区间内符合某一条件的交易日期索引，为通用函数</p>
+<dl class="docutils">
+<dt>info <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame</span></dt>
+<dd>包含 ** 单个 ** 股票被列入指定事项的信息，
+以 sid, begt, endt 为列，字符串日期或者 datetime 日期</dd>
+<dt>dts <span class="classifier-delimiter">:</span> <span class="classifier">pd.DatetimeIndex(</span></dt>
+<dd>区间交易日列表，index 为日期索引</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DatetimeIndex</dt>
+<dd>只有 index，即当前股票价格需要设置为 nan 的日期，name 为 date</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.preprocess.long_stop_filter">
+<code class="descclassname">alpha.preprocess.</code><code class="descname">long_stop_filter</code><span class="sig-paren">(</span><em>since</em>, <em>until</em>, <em>threshold=20</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.preprocess.long_stop_filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>长期停牌复牌后，停牌超过 1 个月复牌不足 1 个月的 [date, sid] 对</p>
+<dl class="docutils">
+<dt>since <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>字符串类型日期 yyyymmdd，譬如 ‘20150101’，表示起始日期</dd>
+<dt>until <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>字符串类型日期 yyyymmdd，譬如 ‘20160101’，表示结束日期</dd>
+<dt>threshold <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>停牌多少个交易日算长期停牌，默认为 20</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame</dt>
+<dd><p class="first">MultilIndex 为 [date, sid] 为需要的数据
+Index: [(2016-01-04 00:00:00, 000003.SZ),</p>
+<blockquote class="last">
+<div>(2016-01-04 00:00:00, 000013.SZ), (2016-01-04 00:00:00, 000015.SZ),
+(2016-01-04 00:00:00, 000033.SZ), (2016-01-04 00:00:00, 000047.SZ)]</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.preprocess.new_stock_filter">
+<code class="descclassname">alpha.preprocess.</code><code class="descname">new_stock_filter</code><span class="sig-paren">(</span><em>since</em>, <em>until</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.preprocess.new_stock_filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>新股过滤器，返回当时是 不足3个月的 [date, sid] 对</p>
+<p>规则：上市不足3个月</p>
+<dl class="docutils">
+<dt>since <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>字符串类型日期 yyyymmdd，譬如 ‘20150101’，表示起始日期</dd>
+<dt>until <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>字符串类型日期 yyyymmdd，譬如 ‘20160101’，表示结束日期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame</dt>
+<dd><p class="first">MultilIndex 为 [date, sid] 为需要的数据
+Index: [(2016-01-04 00:00:00, 000003.SZ),</p>
+<blockquote class="last">
+<div>(2016-01-04 00:00:00, 000013.SZ), (2016-01-04 00:00:00, 000015.SZ),
+(2016-01-04 00:00:00, 000033.SZ), (2016-01-04 00:00:00, 000047.SZ)]</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.preprocess.purify_factors">
+<code class="descclassname">alpha.preprocess.</code><code class="descname">purify_factors</code><span class="sig-paren">(</span><em>factor</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.preprocess.purify_factors" title="Permalink to this definition">¶</a></dt>
+<dd><p>对因子值进行纯化</p>
+<dl class="docutils">
+<dt>factor <span class="classifier-delimiter">:</span> <span class="classifier">pd.DataFrame</span></dt>
+<dd>清洗过的因子数据，index 为 [date, sid]，
+列必须包含 lcap 和另外一个因子</dd>
+</dl>
+<p>不能包含 nan 数据</p>
+<dl class="docutils">
+<dt>resid <span class="classifier-delimiter">:</span> <span class="classifier">Series</span></dt>
+<dd>纯化后的因子值，index 为 [date, sid]</dd>
+<dt>params <span class="classifier-delimiter">:</span> <span class="classifier">DataFrame</span></dt>
+<dd>回归的 系数，index 为 date，列分别为 截距项 和 因子值</dd>
+<dt>t <span class="classifier-delimiter">:</span> <span class="classifier">DataFrame</span></dt>
+<dd>回归的 t 值，index 为 date，列分别为 截距项 和 因子值</dd>
+<dt>r2 <span class="classifier-delimiter">:</span> <span class="classifier">Series</span></dt>
+<dd>回归的 R-Square，index 为 date</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.preprocess.set_filter">
+<code class="descclassname">alpha.preprocess.</code><code class="descname">set_filter</code><span class="sig-paren">(</span><em>prices: pandas.core.frame.DataFrame</em>, <em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.preprocess.set_filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>设置价格过滤：不需要的股票的价格为 nan，可以多次调用，利用不同的 func 来进行设置
+Parameters
+———-
+prices : pd.Series</p>
+<blockquote>
+<div><p>[date, sid] 为 index 并按升序排列，形如下表</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="37%" />
+<col width="37%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">date</th>
+<th class="head">sid</th>
+<th class="head">price</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>2016-01-04</td>
+<td>000001.SZ</td>
+<td>974.31</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td>000002.SZ</td>
+<td>3113.54</td>
+</tr>
+<tr class="row-even"><td></td>
+<td>000004.SZ</td>
+<td>167.88</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td>000005.SZ</td>
+<td>83.78</td>
+</tr>
+<tr class="row-even"><td></td>
+<td>000006.SZ</td>
+<td>332.18</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<dl class="docutils">
+<dt>func <span class="classifier-delimiter">:</span> <span class="classifier">function</span></dt>
+<dd>filter，接受两个参数(begt, endt)的函数, 返回 [date, sid] 的 index，
+意味着这些日期的股票价格数据需要设置为 nan</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.Series</dt>
+<dd>形如 prices 的 Series，只是某些价格被设置为 nan</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.preprocess.set_universe">
+<code class="descclassname">alpha.preprocess.</code><code class="descname">set_universe</code><span class="sig-paren">(</span><em>prices: pandas.core.frame.DataFrame</em>, <em>universe: str</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.preprocess.set_universe" title="Permalink to this definition">¶</a></dt>
+<dd><p>设置股票池。</p>
+<dl class="docutils">
+<dt>prices <span class="classifier-delimiter">:</span> <span class="classifier">pd.Series</span></dt>
+<dd><p class="first">[date, sid] 为 index 并按升序排列，形如下表</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="37%" />
+<col width="37%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">date</th>
+<th class="head">sid</th>
+<th class="head">price</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>2016-01-04</td>
+<td>000001.SZ</td>
+<td>974.31</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td>000002.SZ</td>
+<td>3113.54</td>
+</tr>
+<tr class="row-even"><td></td>
+<td>000004.SZ</td>
+<td>167.88</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td>000005.SZ</td>
+<td>83.78</td>
+</tr>
+<tr class="row-even"><td></td>
+<td>000006.SZ</td>
+<td>332.18</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>universe <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>表示股票池的指数代码</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.Series</dt>
+<dd>将不属于 universe 的股票行情过滤之后的行情 Series</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="alpha.preprocess.st_filter">
+<code class="descclassname">alpha.preprocess.</code><code class="descname">st_filter</code><span class="sig-paren">(</span><em>since</em>, <em>until</em><span class="sig-paren">)</span><a class="headerlink" href="#alpha.preprocess.st_filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>ST信息过滤器，返回当时是 st 的 [date, sid] 对</p>
+<dl class="docutils">
+<dt>since <span class="classifier-delimiter">:</span> <span class="classifier">str or pd.Timestamp</span></dt>
+<dd>起始日期</dd>
+<dt>until <span class="classifier-delimiter">:</span> <span class="classifier">str or pd.Timestamp</span></dt>
+<dd>结束日期</dd>
+</dl>
+<dl class="docutils">
+<dt>pd.DataFrame</dt>
+<dd><p class="first">MultilIndex 为 [date, sid] 为需要的数据
+Index: [(2016-01-04 00:00:00, 000003.SZ),</p>
+<blockquote class="last">
+<div>(2016-01-04 00:00:00, 000013.SZ), (2016-01-04 00:00:00, 000015.SZ),
+(2016-01-04 00:00:00, 000033.SZ), (2016-01-04 00:00:00, 000047.SZ)]</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-alpha">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-alpha" title="Permalink to this headline">¶</a></h2>
+<p>init</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">alpha 0.7.5 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, shaw.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
+    </div>
+  </body>
+</html>
